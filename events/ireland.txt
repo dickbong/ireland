@@ -8,8 +8,8 @@ add_namespace = irelandelection
 
 country_event = { #Irish general election, 1 july 1937
 	id = irelandelection.1937
-	title = irelandelection.1937.title
-	desc = irelandelection.1937.desc
+	title = irelandelection.1937.t
+	desc = irelandelection.1937.d
 	fire_only_once = yes
 	
 	trigger = {
@@ -117,20 +117,19 @@ country_event = { #Irish general election, 1 july 1937
 
 country_event = { #brian de valera dies
 	id = ireland.1
-	title = ireland.1.title
-	desc = ireland.1.desc
+	title = ireland.1.t
+	desc = ireland.1.d
 	fire_only_once = yes
 	
 	trigger = {
 		tag = IRE
-		AND = { #this makes it 9 feb 1936
-			date > 1936.2.8
-			date < 1936.2.10
-		}
+		#this makes it 9 feb 1936
+		date > 1936.2.8
+		date < 1936.2.10
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	}
 	
 	option = {
@@ -139,17 +138,16 @@ country_event = { #brian de valera dies
 }
 country_event = { #wt cosgrave nominated as president for fine gael
 	id = ireland.2
-	title = ireland.2.title
-	desc = ireland.2.desc
+	title = ireland.2.t
+	desc = ireland.2.d
 	fire_only_once = yes
 	
 	trigger = {
 		tag = IRE
 		has_government = democratic
-		AND = { #this makes it 5 march 1936
-			date > 1936.3.8
-			date < 1936.3.10
-		}
+		#this makes it 5 march 1936
+		date > 1936.3.8
+		date < 1936.3.10
 	}
 	
 	mean_time_to_happen = {
@@ -163,12 +161,13 @@ country_event = { #wt cosgrave nominated as president for fine gael
 
 country_event = { #dail passes abolishing senate of irish free state
 	id = ireland.3
-	title = ireland.3.title
-	desc = ireland.3.desc
+	title = ireland.3.t
+	desc = ireland.3.d
 	fire_only_once = yes
 	
 	trigger = {
 		tag = IRE
+		has_country_flag = IRE_abolish_senate_focus
 		AND = { #this makes it 5 march 1936
 			date > 1936.5.27
 			date < 1936.5.29
@@ -176,7 +175,7 @@ country_event = { #dail passes abolishing senate of irish free state
 	}
 	
 	mean_time_to_happen = {
-		hours = 1
+		days = 1
 	} 
 	
 	option = {

@@ -12,9 +12,6 @@ state={
 
 	history={
 		owner = IRE
-		victory_points = {
-			285 1 #Letterkenny
-		}
 		buildings = {
 			arms_factory = 0
 			industrial_complex = 0

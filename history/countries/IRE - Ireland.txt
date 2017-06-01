@@ -22,9 +22,20 @@ ENG = { puppet = IRE }
 ###ministers
 
 add_ideas = {
+	#political figures
 	IRE_sean_lemass
 	IRE_douglas_hyde
 	IRE_sean_ceallaigh
+	#############
+	#high command
+	IRE_dan_mckenna
+	IRE_michael_brennan
+	IRE_frank_fahy
+	#############
+	IRE_richard_james_mulcahy #army chief
+	IRE_h_t_green #air chief
+	IRE_john_byrne #naval chief
+	IRE_michael_joe_costello #theorist
 }
 
 set_politics = {

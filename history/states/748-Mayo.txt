@@ -18,9 +18,6 @@ state={
 		victory_points = {
 			9369 1 #Westport
 		}
-		victory_points = {
-			9321 1 #Ballina
-		}
 		buildings = {
 			arms_factory = 0
 			industrial_complex = 1

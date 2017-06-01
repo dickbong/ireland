@@ -11,7 +11,7 @@ state={
 	history={
 		owner = IRE
 		victory_points = {
-			11303 2 
+			11303 2 #cavan
 		}
 		buildings = {
 			arms_factory = 0

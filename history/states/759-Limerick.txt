@@ -13,7 +13,7 @@ state={
 	history={
 		owner = IRE
 		victory_points = {
-			6289 1 #Wexford
+			6289 1 #Limerick
 		}
 		buildings = {
 			arms_factory = 0

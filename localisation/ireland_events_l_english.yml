@@ -1,0 +1,26 @@
+﻿l_english:
+ ## EVENTS ##
+ ireland.0.t:0 ""
+ ireland.0.d:0 ""
+ ireland.0.a:0 ""
+ 
+ ## ELECTION ##
+
+ irelandelection.1937.t:0 "Irish General Election of 1937"
+ irelandelection.1937.d:0 "The Irish general election of 1937 is being held on 1 July 1937, just over two weeks after the dissolution of the Dáil on the 14th of June. Fianna Fail has finally lost speed and the internal subversion of the vote is attemptable. Who shall win this election?"
+ irelandelection.1937.fiannafail:0 "Fianna Fail, the obvious winner."
+ irelandelection.1937.finegael:0 "With a 'recount,' Fine Gael has won!"
+ irelandelection.1937.luchtoibre:0 "It's a stretch, but the Labour Party."
+ 
+ ## FLAVOR ##
+ ireland.1.t:0 "Brian De Valera Dies in Riding Accident"
+ ireland.1.d:0 "Brian was the 4th of 7 children of Sinéad & Éamon de Valera. His earlier education was by the Holy Ghost Fathers at Blackrock College in Dublin. In 1936 Brian was furthering his education at University College Dublin, where he was pursuing studies as a mathematician. All the while, he was an avid, accomplished horseman. Brian passed away at age 20 from injuries suffered in a riding accident at Phoenix Park in Dublin. His death was devastating to his family. Brian de Valera was buried in Glasnevin Cemetery in Dublin."
+ ireland.1.a:0 "Unfortunate."
+
+ ireland.2.t:0 "Fine Gael Convention Nominates W. T. Cosgrave"
+ ireland.2.d:0 "Recently, 500 delegates from the Fine Gael party have convened to nominate a party president. Once again, it has been W. T. Cosgrave, who earlier in his career succeeded Michael Collins as Chairman of the Provisional Government of the Irish Free State from August to December 1922. Fine Gael was founded in 1933 by the merger of three groups: Cumann na nGaedheal, the National Centre Party, and the National Guard. It is the second most popular democratic party currently behind Fianna Fail."
+ ireland.2.a:0 "Okay."
+ 
+ ireland.3.t:0 "The Dáil Passes Motion to Abolish Senate of the IFS"
+ ireland.3.d:0 "Recently, the Dáil passed a motion abolishing the Senate of the Irish Free State. This motion is set to demolish the ties between the United Kingdom and its dominance over Ireland. This is just another of the moves that internal Irish politicians have made to achieve independence."
+ ireland.3.a:0 "Independence will come soon."

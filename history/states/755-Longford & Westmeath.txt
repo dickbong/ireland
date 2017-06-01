@@ -11,12 +11,15 @@ state={
 	history={
 		owner = IRE
 		victory_points = {
-			369 1 
+			369 1 #mullingar
+		}
+		victory_points = {
+			13206 1 #longford
 		}
 		buildings = {
 			arms_factory = 0
 			industrial_complex = 0
-
+			infrastructure = 1
 		}
 		add_core_of = IRE
 

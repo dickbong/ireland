@@ -1,0 +1,18 @@
+﻿l_english:
+ ## PARTIES ##
+ IRE_democratic_party:0 "Fianna Fáil"
+ IRE_democratic_party_long:0 "Fianna Fáil, The Republican Party"
+ IRE_fascism_party:0 "PNC"
+ IRE_fascism_party_long:0 "Páirtí Náisiúnta Corparáidíoch"
+ IRE_communism_party:0 "CPI"
+ IRE_communism_party_long:0 "Páirtí Cumannach na hÉireann"
+ IRE_neutrality_party:0 "IRA"
+ IRE_neutrality_party_long:0 "Irish Republican Army"
+ IRE_fiannafail_party:0 "Fianna Fáil"
+ IRE_fiannafail_party_long:0 "Fianna Fáil, The Republican Party"
+ IRE_finegael_party:0 "Fine Gael"
+ IRE_finegael_party_long:0 "Fine Gael, The Liberal-Conservative Christian-Democratic Party"
+ IRE_luchtoibre_party:0 "Lucht Oibre"
+ IRE_luchtoibre_party_long:0 "Lucht Oibre, The Labor Party"
+ IRE_resurrection_party:0 "AOTR"
+ IRE_resurrection_party_long:0 "Ailtirí na hAiséirghe, Architects of the Resurrection"
