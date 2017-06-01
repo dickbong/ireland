@@ -19,6 +19,12 @@ ENG = { puppet = IRE }
 
 #set_autonomy = { target = IRE autonomy_state = autonomy_dominion }
 
+### national spirit
+add_ideas = {
+	IRE_enduring_republic
+	IRE_the_troubles
+	IRE_economy_of_commodity
+}
 ###ministers
 
 add_ideas = {
