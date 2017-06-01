@@ -1,0 +1,29 @@
+state={
+	id=756
+	name="STATE_756"
+	provinces={
+		3359 
+	}
+	resources={
+		aluminium=0
+		steel=0
+		oil=0
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			3359 1 #Drogheda
+		}
+		buildings = {
+			arms_factory = 0
+			industrial_complex = 0
+			infrastructure = 3
+		}
+		add_core_of = IRE
+
+	}
+	manpower=61000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

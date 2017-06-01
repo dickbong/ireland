@@ -1,0 +1,28 @@
+state={
+	id=751
+	name="STATE_751"
+	provinces={
+		13210 
+	}
+	resources={
+		aluminium=0
+		steel=0
+		oil=0
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			13210 1 #kildare
+		}
+		buildings = {
+			arms_factory = 0
+			industrial_complex = 0
+		}
+		add_core_of = IRE
+
+	}
+	manpower=57000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

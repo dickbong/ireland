@@ -1,0 +1,34 @@
+state={
+	id=743
+	name="STATE_743"
+	provinces={
+		7394 9284 9405 
+	}
+	resources={
+		aluminium=0
+		steel=0
+		oil=0
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			9284 1 #Mallow
+		}
+		victory_points = {
+			7394 5 #Cork
+		}
+		buildings = {
+			arms_factory = 0
+			industrial_complex = 1
+			9284 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = IRE
+
+	}
+	manpower=355000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

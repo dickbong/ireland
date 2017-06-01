@@ -1,0 +1,186 @@
+﻿## IRELAND EVENTS ##
+## Written by Dick Bong, Ace of Aces ##
+
+add_namespace = ireland
+add_namespace = irelandelection
+
+## ELECTION EVENTS ##
+
+country_event = { #Irish general election, 1 july 1937
+	id = irelandelection.1937
+	title = irelandelection.1937.title
+	desc = irelandelection.1937.desc
+	fire_only_once = yes
+	
+	trigger = {
+		AND = { #this makes it 1 july 1937
+			date > 1937.6.30
+			date < 1937.7.2
+		}
+	}
+	
+	option = {
+		name = irelandelection.fiannafail
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = valera_leader
+				}
+			}
+			retire_country_leader = yes	
+			create_country_leader = {
+				name = "Éamon de Valera"
+				desc = "POLITICS_ÉAMON_DE_VALERA_DESC"
+				picture = "Portrait_Ireland_Eamon_de_Valera.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+					#
+				}
+			}
+			set_party_name = { 
+				ideology = democratic 
+				long_name = IRE_fiannafail_party_long
+				name = IRE_fiannafail_party  
+			}
+			set_country_flag = valera_leader
+			clr_country_flag = cosgrave_leader
+			clr_country_flag = norton_leader
+		}
+		
+	}
+	
+	option = {
+		name = irelandelection.finegael
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = cosgrave_leader
+				}
+			}
+			retire_country_leader = yes	
+			create_country_leader = {
+				name = "W. T. Cosgrave"
+				desc = "POLITICS_W_T_COSGRAVE_DESC"
+				picture = "Portrait_Ireland_W_T_Cosgrave.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					#
+				}
+			}
+			set_party_name = { 
+				ideology = democratic 
+				long_name = IRE_finegael_party_long
+				name = IRE_finegael_party  
+			}
+			set_country_flag = cosgrave_leader
+			clr_country_flag = valera_leader
+			clr_country_flag = norton_leader
+		}
+	}
+	
+	option = {
+		name = irelandelection.luchtoibre
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = norton_leader
+				}
+			}
+			retire_country_leader = yes	
+			create_country_leader = {
+				name = "William Norton"
+				desc = "POLITICS_WILLIAM_NORTON_DESC"
+				picture = "Portrait_Ireland_William_Norton.dds"
+				expire = "1965.1.1"
+				ideology = socialism
+				traits = {
+					#
+				}
+			}
+			set_party_name = { 
+				ideology = democratic 
+				long_name = IRE_luchtoibre_party_long
+				name = IRE_luchtoibre_party  
+			}
+			set_country_flag = norton_leader
+			clr_country_flag = valera_leader
+			clr_country_flag = cosgrave_leader
+		}
+	}
+}
+
+## IRELAND PARTY EVENTS ##
+
+## IRELAND FLAVOR EVENTS ##
+
+country_event = { #brian de valera dies
+	id = ireland.1
+	title = ireland.1.title
+	desc = ireland.1.desc
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IRE
+		AND = { #this makes it 9 feb 1936
+			date > 1936.2.8
+			date < 1936.2.10
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	}
+	
+	option = {
+		name = ireland.1.a
+	}
+}
+country_event = { #wt cosgrave nominated as president for fine gael
+	id = ireland.2
+	title = ireland.2.title
+	desc = ireland.2.desc
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IRE
+		has_government = democratic
+		AND = { #this makes it 5 march 1936
+			date > 1936.3.8
+			date < 1936.3.10
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ireland.2.a
+	}
+}
+
+country_event = { #dail passes abolishing senate of irish free state
+	id = ireland.3
+	title = ireland.3.title
+	desc = ireland.3.desc
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IRE
+		AND = { #this makes it 5 march 1936
+			date > 1936.5.27
+			date < 1936.5.29
+		}
+	}
+	
+	mean_time_to_happen = {
+		hours = 1
+	} 
+	
+	option = {
+		name = ireland.3.a
+		add_autonomy_ratio = { value = 0.1 localization = IRE_senate }	
+	}
+}

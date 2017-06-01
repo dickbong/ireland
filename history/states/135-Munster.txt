@@ -1,0 +1,25 @@
+
+state={
+	id=135
+	name="STATE_135"
+
+	history={
+		owner = IRE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			11237 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = IRE
+
+	}
+
+	provinces={
+		11237 
+	}
+	manpower=78000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

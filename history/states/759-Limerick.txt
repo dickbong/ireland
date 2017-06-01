@@ -1,0 +1,31 @@
+state={
+	id=759
+	name="STATE_759"
+	provinces={
+		6289 
+	}
+	resources={
+		aluminium=0
+		steel=0
+		oil=0
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			6289 1 #Wexford
+		}
+		buildings = {
+			arms_factory = 0
+			industrial_complex = 1
+			6289 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = IRE
+
+	}
+	manpower=141000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,28 @@
+state={
+	id=760
+	name="STATE_760"
+	provinces={
+		11287 
+	}
+	resources={
+		aluminium=0
+		steel=0
+		oil=0
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			11287 1 #Athlone
+		}
+		buildings = {
+			arms_factory = 0
+			industrial_complex = 0
+		}
+		add_core_of = IRE
+
+	}
+	manpower=78000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

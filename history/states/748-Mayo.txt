@@ -1,0 +1,34 @@
+state={
+	id=748
+	name="STATE_748"
+	provinces={
+		9255 9321 9369 
+	}
+	resources={
+		aluminium=0
+		steel=0
+		oil=0
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			9255 3 #Castlebar
+		}
+		victory_points = {
+			9369 1 #Westport
+		}
+		victory_points = {
+			9321 1 #Ballina
+		}
+		buildings = {
+			arms_factory = 0
+			industrial_complex = 1
+		}
+		add_core_of = IRE
+
+	}
+	manpower=161000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

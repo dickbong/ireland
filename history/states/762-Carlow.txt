@@ -1,0 +1,29 @@
+state={
+	id=762
+	name="STATE_762"
+	provinces={
+		13207 
+	}
+	resources={
+		aluminium=0.000
+		steel=0.000
+		oil=0.000
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			13207 1 #carlow
+		}
+		buildings = {
+			arms_factory = 0
+			industrial_complex = 1
+
+		}
+		add_core_of = IRE
+
+	}
+	manpower=34000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

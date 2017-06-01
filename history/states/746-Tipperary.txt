@@ -1,0 +1,31 @@
+state={
+	id=746
+	name="STATE_746"
+	provinces={
+		6313 9310 11267 
+	}
+	resources={
+		aluminium=0
+		steel=0
+		oil=0
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			11267 1 #Tipperary
+		}
+		victory_points = {
+			9310 1 #Thurles
+		}
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = IRE
+
+	}
+	manpower=137000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

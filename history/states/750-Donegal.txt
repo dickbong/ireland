@@ -1,0 +1,28 @@
+state={
+	id=750
+	name="STATE_750"
+	provinces={
+		337 
+	}
+	resources={
+		aluminium=0
+		steel=0
+		oil=0
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			337 1 #Letterkenny
+		}
+		buildings = {
+			arms_factory = 0
+			industrial_complex = 1
+		}
+		add_core_of = IRE
+
+	}
+	manpower=142000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
