@@ -17,8 +17,12 @@ set_cosmetic_tag = IRE_UK #irish free state
 
 ENG = { puppet = IRE }
 
-#set_autonomy = { target = IRE autonomy_state = autonomy_dominion }
-
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	ENG = { set_autonomy = { target = IRE autonomy_state = autonomy_dominion } }
+}
 ### national spirit
 add_ideas = {
 	IRE_enduring_republic
