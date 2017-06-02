@@ -67,6 +67,17 @@ ideas = {
 
 	political_advisor = {
 
+		IRE_sean_t_okelly = {
+
+			picture = generic_political_advisor_europe_5
+
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { silent_workhorse }
+		}
+
 		IRE_sean_lemass = {
 
 			picture = generic_political_advisor_europe_5
