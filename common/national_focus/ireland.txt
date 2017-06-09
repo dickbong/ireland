@@ -11,5 +11,1456 @@ focus_tree = {
 	}
 	
 	default = no
+	
+	focus = {
+		id = IRE_expand_economy
+		icon = GFX_goal_generic_production
+		prerequisite = {  }
+		x = 7
+		y = 0
+		cost = 14.4
 
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			swap_ideas = { remove_idea = IRE_economy_of_commodity add_idea = IRE_economy_of_commodity_improve_1 }	
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = industry }
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = IRE_economy_of_commodity add_idea = IRE_economy_of_commodity_improve_1 }
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = industry }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_expand_economy_2
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = IRE_expand_economy }
+		x = 5
+		y = 1
+		cost = 20
+
+		available_if_capitulated = yes
+
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			swap_ideas = { remove_idea = IRE_economy_of_commodity_improve_1 add_idea = IRE_economy_of_commodity_improve_2 }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_tech_bonus = { bonus = 0.6 uses = 1 category = industry }
+			add_political_power = -50
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = { bonus = 0.6 uses = 1 category = industry }
+			add_political_power = -50	
+			if = {
+				limit = {
+					has_idea = IRE_economy_of_commodity_improve_1
+				}
+				swap_ideas = { remove_idea = IRE_economy_of_commodity_improve_1 add_idea = IRE_economy_of_commodity_improve_2 }
+			}	
+		}
+	}
+	
+	focus = {
+		id = IRE_rights_of_women
+		icon = GFX_focus_IRE_rights_of_women
+		prerequisite = { focus = IRE_expand_economy }
+		mutually_exclusive = { focus = IRE_maternal_leave_no }
+		x = 9
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = IRE_rights_of_women_idea
+			add_political_power = 50	
+		}
+	}
+	
+	focus = {
+		id = IRE_maternal_leave_yes
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = IRE_rights_of_women }
+		mutually_exclusive = { focus = IRE_maternal_leave_no }
+		x = 10
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = IRE_maternal_leave_yes_idea
+			swap_ideas = { remove_idea = IRE_rights_of_women_idea add_idea = IRE_rights_of_women_idea_maternal_yes }
+		}
+	}
+	
+	focus = {
+		id = IRE_maternal_leave_no
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = IRE_rights_of_women }
+		mutually_exclusive = { focus = IRE_maternal_leave_yes }
+		x = 8
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = IRE_maternal_leave_no_idea
+			swap_ideas = { remove_idea = IRE_rights_of_women_idea add_idea = IRE_rights_of_women_idea_maternal_no }
+		}
+	}
+	
+	focus = {
+		id = IRE_equal_pay_no
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = IRE_maternal_leave_yes focus = IRE_maternal_leave_no }
+		mutually_exclusive = { focus = IRE_equal_pay_yes }
+		x = 8
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = IRE_equal_pay_no_idea
+		}
+	}
+	
+	focus = {
+		id = IRE_equal_pay_yes
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = IRE_maternal_leave_yes focus = IRE_maternal_leave_no }
+		mutually_exclusive = { focus = IRE_equal_pay_no }
+		x = 10
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = IRE_equal_pay_yes_idea
+		}
+	}
+	
+	focus = {
+		id = IRE_abandon_isolation
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = IRE_expand_economy_2 }
+		mutually_exclusive = {  }
+		x = 6
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			NOT = { has_idea = isolation }
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = isolation add_idea = civilian_economy }	
+			
+		}
+	}
+	
+	focus = {
+		id = IRE_invest_in_synthetics
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = IRE_abandon_isolation }
+		mutually_exclusive = {  }
+		x = 6
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+		
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 uses = 2 category = synth_resources }
+			swap_ideas = { remove_idea = IRE_economy_of_commodity_improve_2 add_idea = IRE_economy_of_commodity_improve_3 }			
+			
+		}
+	}
+	
+	focus = {
+		id = IRE_rearmament_1
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = IRE_expand_economy_2 }
+		mutually_exclusive = {  }
+		x = 4
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_reconscription
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = IRE_rearmament_1 }
+		mutually_exclusive = {  }
+		x = 4
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+		
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			set_country_flag = IRE_reconscription_flag
+			swap_ideas = { remove_idea = disarmed_nation add_idea = limited_conscription }
+		}
+	}
+	
+	focus = {
+		id = IRE_wartime_economy
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = IRE_reconscription focus = IRE_invest_in_synthetics }
+		mutually_exclusive = {  }
+		x = 9
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_war = yes
+		}
+
+		bypass = {
+		
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = IRE_allowed_war_economy_tt
+			set_country_flag = IRE_allowed_war_economy
+			
+			swap_ideas = { remove_idea = IRE_economy_of_commodity_improve_3 add_idea = IRE_economy_of_commodity_improve_4 }
+		}
+	}
+	
+	focus = {
+		id = IRE_rearmament_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = IRE_wartime_economy }
+		mutually_exclusive = {  }
+		x = 8
+		y = 5
+		cost = 10
+		
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			swap_ideas = { remove_idea = IRE_economy_of_commodity_improve_4 add_idea = IRE_economy_of_commodity_improve_5 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			swap_ideas = { remove_idea = IRE_economy_of_commodity_improve_4 add_idea = IRE_economy_of_commodity_improve_5 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_women_of_the_war
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = IRE_wartime_economy }
+		prerequisite = { focus = IRE_equal_pay_no focus = IRE_equal_pay_yes }
+		mutually_exclusive = {  }
+		x = 10
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_war = yes
+		}
+
+		bypass = {
+		
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			set_country_flag = IRE_allowed_war_economy
+			if = {
+				limit = { has_idea = IRE_equal_pay_no_idea }
+				add_ideas = IRE_women_of_the_war_no_pay_idea
+			}
+			if = {
+				limit = { has_idea = IRE_equal_pay_yes_idea }
+				add_ideas = IRE_women_of_the_war_yes_pay_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_naval
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = IRE_reconscription }
+		mutually_exclusive = {  }
+		x = 5
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_war = yes
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	
+	focus = {
+		id = IRE_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = IRE_naval }
+		x = 6
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+	}
+
+	focus = {
+		id = IRE_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = IRE_naval }
+		x = 4
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+		}
+	}
+
+	focus = {
+		id = IRE_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = IRE_submarine_effort }
+		x = 6
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_destroyer
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		}
+	}
+
+	focus = {
+		id = IRE_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = IRE_cruiser_effort }
+		x = 4
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = basic_battlecruiser
+				technology = basic_battleship
+				technology = improved_battleship
+				technology = advanced_battleship
+				technology = heavy_battleship
+				technology = heavy_battleship2
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_blue_boys
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = IRE_capital_ships_effort focus = IRE_destroyer_effort }
+		x = 5
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_ideas = IRE_blue_boys
+		}
+	}
+	
+	focus = {
+		id = IRE_shutting_off_exports
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = IRE_rearmament_2 focus = IRE_women_of_the_war }
+		x = 8
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+		
+		available = {
+			has_war = yes
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = export_focus }
+				swap_ideas = { remove_idea = export_focus add_idea = limited_exports }	
+			}
+			if = {
+				limit = { has_idea = free_trade }
+				swap_ideas = { remove_idea = free_trade add_idea = limited_exports }	
+			}
+		}
+	}
+	focus = {
+		id = IRE_hardened_drilling
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = IRE_rearmament_2 focus = IRE_women_of_the_war }
+		x = 10
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_war = yes
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IRE_more_drilling
+		}
+	}
+	
+	focus = {
+		id = IRE_wartime_logistics
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = IRE_rearmament_2 focus = IRE_women_of_the_war }
+		x = 9
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_war = yes
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 2
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 3
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	## The Troubles ##
+	
+	focus = {
+		id = IRE_fix_troubles_1
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { }
+		mutually_exclusive = { focus = IRE_give_into_demands }
+		x = 13
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IRE_the_troubles_improve_1
+		}
+	}
+	
+	focus = {
+		id = IRE_fix_troubles_1
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { }
+		mutually_exclusive = { focus = IRE_give_into_demands }
+		x = 13
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = IRE_the_troubles add_idea = IRE_the_troubles_improve_1 }	
+		}
+	}
+	
+	focus = {
+		id = IRE_fix_troubles_2
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = IRE_fix_troubles_1 }
+		mutually_exclusive = { focus = IRE_fix_troubles_military_action }
+		x = 12
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = IRE_the_troubles_improve_1 add_idea = IRE_the_troubles_improve_2 }	
+		}
+	}
+	
+	focus = {
+		id = IRE_fix_troubles_3
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = IRE_fix_troubles_2 }
+		x = 12
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = IRE_the_troubles_improve_2 add_idea = IRE_the_troubles_improve_3 }	
+		}
+	}
+	
+	focus = {
+		id = IRE_fix_troubles_4
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = IRE_fix_troubles_3 }
+		x = 13
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = IRE_the_troubles_improve_3 add_idea = IRE_the_troubles_improve_4 }	
+		}
+	}
+	
+	focus = {
+		id = IRE_fix_troubles_military_action
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = IRE_fix_troubles_1 }
+		mutually_exclusive = { focus = IRE_fix_troubles_2 }
+		x = 14
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IRE_the_troubles_improve_2
+		}
+	}
+	
+	focus = {
+		id = IRE_fix_troubles_stamping_out_IRA
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = IRE_fix_troubles_military_action }
+		x = 14
+		y = 2
+		cost = 20
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IRE_the_troubles_improve_2
+		}
+	}
+	
+	focus = {
+		id = IRE_give_into_demands
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { }
+		mutually_exclusive = { focus = IRE_fix_troubles_1 }
+		x = 16
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_state_claim = 119 #Northern Ireland	
+		}
+	}
+	
+	focus = {
+		id = IRE_hostile_takeover
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = IRE_give_into_demands }
+		x = 16
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_idea = IRE_the_troubles
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				IRE = { is_puppet = yes}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = IRE_hostile_takeover_idea
+			custom_effect_tooltip = IRE_hostile_takeover_tt
+		}
+	}
+	
+	focus = {
+		id = IRE_inviting_IRA_generals
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = IRE_hostile_takeover }
+		x = 16
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			OR = {
+				has_war = yes
+				has_government = neutrality
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = IRE_inviting_IRA_generals_tt
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Seamus O'Donovan" 
+					gfx = "Portrait_Ireland_Seamus_ODonovan.dds" 
+					traits = { commando } 
+					skill = 3
+				}
+				create_corps_commander = {
+					name = "Seán Russell" 
+					gfx = "Portrait_Ireland_Sean_Russel.dds" 
+					traits = { hill_fighter } 
+					skill = 4
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_ultimatum_for_northern_ireland
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = IRE_inviting_IRA_generals }
+		x = 15
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+			remove_ideas = IRE_the_troubles
+		}
+	}
+	
+	focus = {
+		id = IRE_S_plan
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = IRE_inviting_IRA_generals }
+		x = 17
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = {
+			NOT = {
+				is_in_faction_with = ENG	
+			}
+			ENG = { has_war = yes}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = IRE_s_plan_idea
+			set_country_flag = IRE_s_plan_flag
+		}
+	}
 }

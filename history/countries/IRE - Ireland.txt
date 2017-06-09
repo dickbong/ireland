@@ -11,6 +11,8 @@ set_technology = {
 	infantry_weapons1 = 1
 }
 
+country_event = { days = 1 id = irelandtroubles.1 }
+
 set_convoys = 10
 
 set_cosmetic_tag = IRE_UK #irish free state
@@ -46,6 +48,13 @@ add_ideas = {
 	#IRE_h_t_green #air chief
 	#IRE_john_byrne #naval chief
 	#IRE_michael_joe_costello #theorist
+}
+
+###laws
+
+add_ideas = {
+	isolation
+	disarmed_nation
 }
 
 set_politics = {
@@ -135,7 +144,7 @@ create_country_leader = {
 }
 
 create_country_leader = { #IRISH FREE STATE
-	name = "Domhnall Ua Buachalla"
+	name = "Maurice 'Moss' Twomey"
 	desc = "POLITICS_JAMES_LARKIN_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 	expire = "1965.1.1"

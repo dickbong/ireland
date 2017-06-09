@@ -1,0 +1,5 @@
+﻿l_english:
+ ## FLAGS ##
+ IRE_allowed_war_economy:0 "Completed Wartime Economy Focus"
+ IRE_allowed_war_economy_tt:0 "Allows 'War Economy' and 'Total Economic Mobilisation' laws. "
+ IRE_reconscription_flag:0 "Completed Reconscription Focus"

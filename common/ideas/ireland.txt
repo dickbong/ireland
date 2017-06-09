@@ -21,6 +21,127 @@ ideas = {
 				production_speed_buildings_factor = -0.025
 				industrial_capacity_factory = -0.025
 				industrial_capacity_dockyard = -0.025
+				training_time_army_factor = 0.5
+			}
+		}
+		
+		IRE_economy_of_commodity_improve_1 = {
+		
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.27
+				conscription_factor = -0.25
+				production_speed_buildings_factor = -0.025
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+				training_time_army_factor = 0.5
+			}
+		}
+		
+		IRE_economy_of_commodity_improve_2 = {
+		
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.24
+				conscription_factor = -0.25
+				production_speed_buildings_factor = -0.025
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+				training_time_army_factor = 0.5
+			}
+		}
+		
+		IRE_economy_of_commodity_improve_3 = {
+		
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.21
+				conscription_factor = -0.25
+				production_speed_buildings_factor = -0.025
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+				training_time_army_factor = 0.5
+			}
+		}
+		
+		IRE_economy_of_commodity_improve_4 = {
+		
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.18
+				conscription_factor = -0.25
+				production_speed_buildings_factor = -0.025
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+				training_time_army_factor = 0.5
+			}
+		}
+		
+		IRE_economy_of_commodity_improve_5 = {
+		
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				conscription_factor = -0.25
+				production_speed_buildings_factor = -0.025
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+				training_time_army_factor = 0.5
 			}
 		}
 		
@@ -43,6 +164,135 @@ ideas = {
 			}
 		}
 		
+		IRE_the_troubles_improve_1 = {
+		
+			picture = generic_disjointed_gov
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.4
+			}
+		}
+		
+		IRE_the_troubles_improve_2 = {
+		
+			picture = generic_disjointed_gov
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				unity_factor = 0.05
+				political_power_factor = -0.3
+			}
+		}
+		
+		IRE_the_troubles_improve_3 = {
+		
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				unity_factor = 0.075
+				political_power_factor = -0.2
+				neutrality_drift = -0.02
+			}
+		}
+		
+		IRE_the_troubles_improve_4 = {
+		
+			picture = generic_intel_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				unity_factor = 0.075
+				political_power_factor = -0.1
+				neutrality_drift = -0.05
+			}
+		}
+		
+		IRE_hostile_takeover_idea = {
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.1
+			}
+			
+			ai_strategy = {
+				type = antagonize
+				id = "ENG"			
+				value = 200
+			}
+		}
+		
+		IRE_s_plan_idea = {
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_acceptance = 10
+			}
+			
+			ai_strategy = {
+				type = befriend
+				id = "GER"			
+				value = 10
+			}
+		}
+		
 		IRE_enduring_republic = {
 		
 			picture = generic_morale_bonus
@@ -61,6 +311,247 @@ ideas = {
 				army_core_defence_factor = 0.1
 				drift_defence_factor = 0.1
 				enemy_justify_war_goal_time = 0.1
+			}
+		}
+		
+		IRE_rights_of_women_idea = {
+		
+			picture = IRE_rights_of_women_idea
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
+		
+		IRE_rights_of_women_idea_maternal_no = {
+		
+			picture = IRE_rights_of_women_idea
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				unity_factor = -0.05
+			}
+		}
+		
+		IRE_rights_of_women_idea_maternal_yes = {
+		
+			picture = IRE_rights_of_women_idea
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				unity_factor = 0.075
+			}
+		}
+		
+		IRE_maternal_leave_no_idea = {
+		
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = -0.125
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		IRE_maternal_leave_yes_idea = {
+		
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = 0.125
+				production_speed_arms_factory_factor = -0.05
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_dockyard_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		
+		IRE_equal_pay_no_idea = {
+		
+			picture = neutrality_idea
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.30
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_dockyard_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				unity_factor = -0.125
+			}
+		}
+		
+		IRE_equal_pay_yes_idea = {
+		
+			picture = neutrality_idea
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.5
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				unity_factor = 0.125
+			}
+		}
+		
+		IRE_women_of_the_war_no_pay_idea = {
+		
+			picture = neutrality_idea
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.025
+				production_speed_industrial_complex_factor = 0.025
+				production_speed_dockyard_factor = 0.025
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.025
+			}
+		}
+		
+		IRE_women_of_the_war_yes_pay_idea = {
+		
+			picture = neutrality_idea
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.075
+				production_speed_industrial_complex_factor = 0.075
+				production_speed_dockyard_factor = 0.075
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.75
+			}
+		}
+		
+		IRE_blue_boys = {
+		
+			picture = escort_effort_focus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.01
+				production_speed_naval_base_factor = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		
+		IRE_more_drilling = {
+		
+			picture = generic_infantry_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = -0.5
 			}
 		}
 	}

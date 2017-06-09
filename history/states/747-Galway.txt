@@ -16,8 +16,9 @@ state={
 			3396 5 #Galway
 		}
 		buildings = {
-			arms_factory = 1
+			arms_factory = 0
 			industrial_complex = 1
+			infrastructure = 4
 		}
 		add_core_of = IRE
 

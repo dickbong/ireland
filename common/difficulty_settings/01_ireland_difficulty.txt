@@ -1,0 +1,9 @@
+difficulty_settings = {
+	## IRELAND MOD ##
+	difficulty_setting = {
+		key = "custom_diff_strong_ire"
+		modifier = diff_strong_ai_generic
+		countries = { IRE }
+		multiplier = 2.0
+	}
+}

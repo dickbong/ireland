@@ -19,8 +19,9 @@ state={
 			9310 1 #Thurles
 		}
 		buildings = {
-			arms_factory = 1
+			arms_factory = 0
 			industrial_complex = 1
+			infrastructure = 4
 		}
 		add_core_of = IRE
 

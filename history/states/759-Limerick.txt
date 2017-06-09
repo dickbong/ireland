@@ -21,6 +21,7 @@ state={
 			6289 = {
 				naval_base = 1
 			}
+			infrastructure = 3
 		}
 		add_core_of = IRE
 

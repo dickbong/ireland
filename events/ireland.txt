@@ -3,6 +3,7 @@
 
 add_namespace = ireland
 add_namespace = irelandelection
+add_namespace = irelandtroubles
 
 ## ELECTION EVENTS ##
 
@@ -181,5 +182,174 @@ country_event = { #dail passes abolishing senate of irish free state
 	option = {
 		name = ireland.3.a
 		add_autonomy_ratio = { value = 0.1 localization = IRE_senate }	
+	}
+}
+
+## The Troubles ##
+
+#yearly reset & report
+country_event = {
+	id = irelandtroubles.1
+	title = irelandtroubles.1.t
+	desc = irelandtroubles.1.d
+	is_triggered_only = yes
+	hidden = yes
+
+	
+	immediate = {
+		country_event = { days = 31 id = irelandtroubles.1 }
+		clr_country_flag = IRE_troubles_reset
+		clr_country_flag = IRE_troubles_event_2
+		
+	}
+	
+	option = {
+		name = irelandtroubles.a
+		set_country_flag = IRE_troubles_reset
+	}
+}
+
+country_event = { #people desert to IRA
+	id = irelandtroubles.2
+	#title = irelandtroubles.2.t
+	title = "Soldiers Desert to IRA"
+	#desc = irelandtroubles.2.d
+	desc = "In the midst of all the troubles soldiers from the national reserves have enlisted in the Irish Republican Army. Truly dark times for the hopes of a 'united' Ireland."
+	picture = GFX_report_event_generic_army
+	
+	trigger = {
+		has_idea = IRE_the_troubles
+		has_country_flag = IRE_troubles_reset
+		NOT = { has_country_flag = IRE_troubles_event_2 }
+	}
+	
+	mean_time_to_happen = {
+		days = 124
+	} 
+	
+	option = {
+		#name = irelandtroubles.2.a
+		name = "Damn it."
+		set_country_flag = IRE_troubles_event_2
+		add_manpower = -100	
+		add_political_power = -10
+	}
+}
+
+country_event = { #IRA attack factory
+	id = irelandtroubles.3
+	title = "IRA Attacks Factory"
+	desc = "In an attempt to send a message, the Irish Republican Army has blown up an Irish factory using some kind of bomb. Hopefully, we can look past our differences and see that destruction is not the way to unification."
+	picture = GFX_report_event_generic_ruins
+	
+	trigger = {
+		has_idea = IRE_the_troubles
+		has_country_flag = IRE_troubles_reset
+		NOT = { has_country_flag = IRE_troubles_event_3 }
+	}
+	
+	mean_time_to_happen = {
+		days = 124
+	} 
+	
+	option = {
+		name = "Why must they do this?"
+		set_country_flag = IRE_troubles_event_3
+		random_owned_state = {
+			limit = { 
+				is_owned_by = IRE 
+				num_of_civilian_factories > 0
+			}
+			damage_building = { type = industrial_complex damage = 0.9 }
+		}
+		add_political_power = -10		
+	}
+}
+
+country_event = { #promise to make things better
+	id = irelandtroubles.4
+	title = "Citizens Fear IRA"
+	desc = "In these dark times, our citizens fear that the Irish Republican Army will do something bad to them or blow up their houses. We must assure them that things will get better."
+	picture = GFX_report_event_generic_rally
+	
+	trigger = {
+		has_idea = IRE_the_troubles
+		has_country_flag = IRE_troubles_reset
+		NOT = { has_country_flag = IRE_troubles_event_4 }
+	}
+	
+	mean_time_to_happen = {
+		days = 155
+	} 
+	
+	option = {
+		name = "We will promise to make things better."
+		add_political_power = -20		
+	}
+}
+
+country_event = { #troubles further divide irish people
+	id = irelandtroubles.5
+	title = "The Troubles Divide the Irish"
+	desc = "The Troubles have further deepened the hatred of the partition and are escalating ethno-nationalist conflicts. We pray that we can get through these dark times."
+	picture = GFX_report_event_generic_riot
+	
+	trigger = {
+		has_idea = IRE_the_troubles
+		has_country_flag = IRE_troubles_reset
+		NOT = { has_country_flag = IRE_troubles_event_5 }
+	}
+	
+	mean_time_to_happen = {
+		days = 155
+	} 
+	
+	option = {
+		name = "Damn."
+		add_political_power = -10
+		add_national_unity = -0.01			
+	}
+}
+
+country_event = { #people don't trust government
+	id = irelandtroubles.6
+	title = "Citizens Don't Trust the Government"
+	desc = "Some citizens have lost faith in our government due our inability to fix the Troubles. They have sided with other parties that have been promising to either make Ireland and ethnic utopia or socialist utopia."
+	picture = GFX_report_event_generic_rally2
+	
+	trigger = {
+		has_idea = IRE_the_troubles
+		has_country_flag = IRE_troubles_reset
+		NOT = { has_country_flag = IRE_troubles_event_5 }
+	}
+	
+	mean_time_to_happen = {
+		days = 155
+	} 
+	
+	option = {
+		name = "Unfortunate."
+		add_political_power = -10
+		if = {
+			limit = { has_government = democratic }
+			random_list = { 
+				50 = { add_popularity = { ideology = fascism popularity = 0.01 } } 
+				50 = { add_popularity = { ideology = communism popularity = 0.01 } } 
+			}	
+		}
+		if = {
+			limit = { has_government = fascism }
+			random_list = { 
+				50 = { add_popularity = { ideology = democratic popularity = 0.01 } } 
+				50 = { add_popularity = { ideology = communism popularity = 0.01 } } 
+			}	
+		}
+		if = {
+			limit = { has_government = communism }
+			random_list = { 
+				50 = { add_popularity = { ideology = democratic popularity = 0.01 } } 
+				50 = { add_popularity = { ideology = fascism popularity = 0.01 } } 
+			}	
+		}
 	}
 }
