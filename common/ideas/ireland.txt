@@ -260,12 +260,11 @@ ideas = {
 
 			modifier = {
 				neutrality_drift = 0.1
-			}
-			
-			ai_strategy = {
-				type = antagonize
-				id = "ENG"			
-				value = 200
+				#ai_strategy = {
+				#	type = antagonize
+				#	id = "ENG"			
+				#	value = 200
+				#}
 			}
 		}
 		
@@ -284,12 +283,11 @@ ideas = {
 
 			modifier = {
 				fascism_acceptance = 10
-			}
-			
-			ai_strategy = {
-				type = befriend
-				id = "GER"			
-				value = 10
+				#ai_strategy = {
+				#	type = befriend
+				#	id = "GER"			
+				#	value = 10
+				#}
 			}
 		}
 		

@@ -200,6 +200,10 @@ country_event = {
 		country_event = { days = 31 id = irelandtroubles.1 }
 		clr_country_flag = IRE_troubles_reset
 		clr_country_flag = IRE_troubles_event_2
+		clr_country_flag = IRE_troubles_event_3
+		clr_country_flag = IRE_troubles_event_4
+		clr_country_flag = IRE_troubles_event_5
+		clr_country_flag = IRE_troubles_event_6
 		
 	}
 	
@@ -218,13 +222,19 @@ country_event = { #people desert to IRA
 	picture = GFX_report_event_generic_army
 	
 	trigger = {
-		has_idea = IRE_the_troubles
+		OR = { 
+			has_idea = IRE_the_troubles
+			has_idea = IRE_the_troubles_improve_1
+			has_idea = IRE_the_troubles_improve_2
+			has_idea = IRE_the_troubles_improve_3
+			has_idea = IRE_the_troubles_improve_4
+		}
 		has_country_flag = IRE_troubles_reset
 		NOT = { has_country_flag = IRE_troubles_event_2 }
 	}
 	
 	mean_time_to_happen = {
-		days = 124
+		days = 93
 	} 
 	
 	option = {
@@ -243,13 +253,19 @@ country_event = { #IRA attack factory
 	picture = GFX_report_event_generic_ruins
 	
 	trigger = {
-		has_idea = IRE_the_troubles
+		OR = { 
+			has_idea = IRE_the_troubles
+			has_idea = IRE_the_troubles_improve_1
+			has_idea = IRE_the_troubles_improve_2
+			has_idea = IRE_the_troubles_improve_3
+			has_idea = IRE_the_troubles_improve_4
+		}
 		has_country_flag = IRE_troubles_reset
 		NOT = { has_country_flag = IRE_troubles_event_3 }
 	}
 	
 	mean_time_to_happen = {
-		days = 124
+		days = 93
 	} 
 	
 	option = {
@@ -273,17 +289,24 @@ country_event = { #promise to make things better
 	picture = GFX_report_event_generic_rally
 	
 	trigger = {
-		has_idea = IRE_the_troubles
+		OR = { 
+			has_idea = IRE_the_troubles
+			has_idea = IRE_the_troubles_improve_1
+			has_idea = IRE_the_troubles_improve_2
+			has_idea = IRE_the_troubles_improve_3
+			has_idea = IRE_the_troubles_improve_4
+		}
 		has_country_flag = IRE_troubles_reset
 		NOT = { has_country_flag = IRE_troubles_event_4 }
 	}
 	
 	mean_time_to_happen = {
-		days = 155
+		days = 93
 	} 
 	
 	option = {
 		name = "We will promise to make things better."
+		set_country_flag = IRE_troubles_event_4
 		add_political_power = -20		
 	}
 }
@@ -295,17 +318,24 @@ country_event = { #troubles further divide irish people
 	picture = GFX_report_event_generic_riot
 	
 	trigger = {
-		has_idea = IRE_the_troubles
+		OR = { 
+			has_idea = IRE_the_troubles
+			has_idea = IRE_the_troubles_improve_1
+			has_idea = IRE_the_troubles_improve_2
+			has_idea = IRE_the_troubles_improve_3
+			has_idea = IRE_the_troubles_improve_4
+		}
 		has_country_flag = IRE_troubles_reset
 		NOT = { has_country_flag = IRE_troubles_event_5 }
 	}
 	
 	mean_time_to_happen = {
-		days = 155
+		days = 93
 	} 
 	
 	option = {
 		name = "Damn."
+		set_country_flag = IRE_troubles_event_5
 		add_political_power = -10
 		add_national_unity = -0.01			
 	}
@@ -318,17 +348,24 @@ country_event = { #people don't trust government
 	picture = GFX_report_event_generic_rally2
 	
 	trigger = {
-		has_idea = IRE_the_troubles
+		OR = { 
+			has_idea = IRE_the_troubles
+			has_idea = IRE_the_troubles_improve_1
+			has_idea = IRE_the_troubles_improve_2
+			has_idea = IRE_the_troubles_improve_3
+			has_idea = IRE_the_troubles_improve_4
+		}
 		has_country_flag = IRE_troubles_reset
-		NOT = { has_country_flag = IRE_troubles_event_5 }
+		NOT = { has_country_flag = IRE_troubles_event_6 }
 	}
 	
 	mean_time_to_happen = {
-		days = 155
+		days = 93
 	} 
 	
 	option = {
 		name = "Unfortunate."
+		set_country_flag = IRE_troubles_event_6
 		add_political_power = -10
 		if = {
 			limit = { has_government = democratic }
@@ -351,5 +388,128 @@ country_event = { #people don't trust government
 				50 = { add_popularity = { ideology = fascism popularity = 0.01 } } 
 			}	
 		}
+	}
+}
+
+## Hostile Takeover Events ##
+
+country_event = { #people join Sinn Fein
+	id = irelandtroubles.7
+	title = "More Alligence to Sinn Féin"
+	desc = "Citizens have started to move their alligence from [IRE.rulingparty] and other parties to join Sinn Fein and the IRA. I guess we can't have troubles if everyone wants unification?"
+	picture = GFX_report_event_read_write
+	
+	trigger = {
+		OR = { 
+			has_idea = IRE_hostile_takeover_idea
+			AND = {
+				has_idea = IRE_the_troubles
+				has_political_power < -50	
+			}
+		}
+		has_country_flag = IRE_troubles_reset
+		NOT = { has_country_flag = IRE_troubles_event_7 }
+	}
+	
+	mean_time_to_happen = {
+		days = 93
+	} 
+	
+	option = {
+		name = "Okay."
+		set_country_flag = IRE_troubles_event_7
+		add_popularity = { ideology = neutrality popularity = 0.005 }
+	}
+	
+	option = {
+		name = "We have to suppress this."
+		set_country_flag = IRE_troubles_event_7
+		add_popularity = { ideology = neutrality popularity = -0.01 }
+		add_political_power = -10
+	}
+}
+
+country_event = { #Police turn blind eye to IRA activity
+	id = irelandtroubles.8
+	title = "Police Turn Blind Eye to IRA"
+	desc = "As alligence to Sinn Féin increases, the police have turned more and more blind eyes to routine IRA activity. Soon, protesting about the Partition won't be illegal, it'll be encouraged!"
+	picture = GFX_report_event_generic_riot
+	
+	trigger = {
+		OR = { 
+			has_idea = IRE_hostile_takeover_idea
+			AND = {
+				has_idea = IRE_the_troubles
+				has_political_power < -50	
+			}
+		}
+		has_country_flag = IRE_troubles_reset
+		NOT = { has_country_flag = IRE_troubles_event_8 }
+	}
+	
+	mean_time_to_happen = {
+		days = 93
+	} 
+	
+	option = {
+		name = "Okay."
+		set_country_flag = IRE_troubles_event_8
+		add_popularity = { ideology = neutrality popularity = 0.005 }
+	}
+	
+	option = {
+		name = "Fire the corrupt police!"
+		set_country_flag = IRE_troubles_event_8
+		add_popularity = { ideology = neutrality popularity = -0.1 }
+		add_political_power = -10
+	}
+}
+
+country_event = { #IRA rallies
+	id = irelandtroubles.9
+	title = "IRA Rally"
+	desc = "As more police tolerate IRA activity, there have been more and more rallies held by the IRA. As we stand by, more people are taking up arms in the name of the IRA. Should we do something?"
+	picture = GFX_report_event_generic_rally_3
+	
+	trigger = {
+		OR = { 
+			has_idea = IRE_hostile_takeover_idea
+			AND = {
+				has_idea = IRE_the_troubles
+				has_political_power < -50	
+			}
+		}
+		has_country_flag = IRE_troubles_reset
+		NOT = { has_country_flag = IRE_troubles_event_9 }
+	}
+	
+	mean_time_to_happen = {
+		days = 93
+	} 
+	
+	option = {
+		name = "Let them be."
+		set_country_flag = IRE_troubles_event_9
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+	}
+	
+	option = {
+		name = "Shut it down!"
+		set_country_flag = IRE_troubles_event_9
+		add_popularity = { ideology = neutrality popularity = -0.1 }
+		add_political_power = -10
+	}
+}
+
+country_event = { #[IRE.GetLeader] proclaims IRA illegal
+	id = irelandtroubles.10
+	title = "[IRE.GetLeader] Proclaims IRA Illegal"
+	desc = "Although already proclaimed illegal, recently [IRE.GetLeader] has reaffirmed that the IRA is an illegal organization. He said in the proclaimation that 'the Irish Republican Army continues to be an illegal organization due to its dependence on violence to convey their message.' Hopefully this new proclaimation will drive away new recruits."
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	
+	option = {
+		name = "Alright."
+		add_political_power = 50
 	}
 }

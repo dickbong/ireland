@@ -984,6 +984,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = IRE_more_drilling
+			army_experience = 50
 		}
 	}
 	
@@ -1165,7 +1166,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = IRE_the_troubles_improve_1
+			swap_ideas = { remove_idea = IRE_the_troubles add_idea = IRE_the_troubles_improve_1 }
 		}
 	}
 	
@@ -1190,6 +1191,7 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = { remove_idea = IRE_the_troubles add_idea = IRE_the_troubles_improve_1 }	
+			country_event = { days = 1 id = irelandtroubles.10 }
 		}
 	}
 	
@@ -1236,7 +1238,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = { remove_idea = IRE_the_troubles_improve_2 add_idea = IRE_the_troubles_improve_3 }	
+			swap_ideas = { remove_idea = IRE_the_troubles_improve_2 add_idea = IRE_the_troubles_improve_3 }
 		}
 	}
 	
@@ -1330,6 +1332,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_political_power = 50
 			add_state_claim = 119 #Northern Ireland	
 		}
 	}
@@ -1357,7 +1360,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = IRE_hostile_takeover_idea
+			remove_ideas = IRE_the_troubles
+			add_timed_idea = { idea = IRE_hostile_takeover_idea days = 365 }	
 			custom_effect_tooltip = IRE_hostile_takeover_tt
 		}
 	}
@@ -1401,6 +1405,12 @@ focus_tree = {
 					gfx = "Portrait_Ireland_Sean_Russel.dds" 
 					traits = { hill_fighter } 
 					skill = 4
+				}
+				create_corps_commander = {
+					name = "Tom Barry" 
+					gfx = "Portrait_Ireland_Sean_Russel.dds" 
+					traits = { mountaineer } 
+					skill = 5
 				}
 			}
 		}
@@ -1447,7 +1457,8 @@ focus_tree = {
 			NOT = {
 				is_in_faction_with = ENG	
 			}
-			ENG = { has_war = yes}
+			ENG = { has_war_with = GER }
+			GER = { has_government = fascism }
 		}
 
 		ai_will_do = {

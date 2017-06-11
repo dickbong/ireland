@@ -145,18 +145,25 @@ create_country_leader = {
 
 create_country_leader = { #IRISH FREE STATE
 	name = "Maurice 'Moss' Twomey"
-	desc = "POLITICS_JAMES_LARKIN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	desc = "POLITICS_MAURICE_TWOMEY_DESC"
+	picture = "gfx/leaders/IRE/Portrait_Ireland_Maurice_Twomey.dds"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = centrism
 	traits = {
 		#
 	}
 }
 
 create_corps_commander = {
-	name = "Michael Costello"
-	portrait_path = "gfx/leaders/ENG/Portrait_Britain_Generic_land_4.dds"
+	name = "Michael Joe Costello"
+	portrait_path = "gfx/leaders/IRE/Portrait_Ireland_Michael_Joe_Costello.dds"
+	traits = {  }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Hugo MacNeill"
+	portrait_path = "gfx/leaders/IRE/Portrait_Ireland_Hugo_MacNeill.dds"
 	traits = {  }
 	skill = 2
 }
