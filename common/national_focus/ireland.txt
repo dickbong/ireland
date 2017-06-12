@@ -1158,31 +1158,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			has_idea = IRE_the_troubles
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			swap_ideas = { remove_idea = IRE_the_troubles add_idea = IRE_the_troubles_improve_1 }
-		}
-	}
-	
-	focus = {
-		id = IRE_fix_troubles_1
-		icon = GFX_focus_generic_diplomatic_treaty
-		prerequisite = { }
-		mutually_exclusive = { focus = IRE_give_into_demands }
-		x = 13
-		y = 0
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		available = {
-			has_idea = IRE_the_troubles
+			OR = {
+				has_idea = IRE_the_troubles
+			}
 		}
 
 		ai_will_do = {
@@ -1191,7 +1169,7 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = { remove_idea = IRE_the_troubles add_idea = IRE_the_troubles_improve_1 }	
-			country_event = { days = 1 id = irelandtroubles.10 }
+			country_event = { days = 1 id = irelandtroublesfocus.1 }
 		}
 	}
 	
@@ -1207,7 +1185,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			has_idea = IRE_the_troubles
+			OR = {
+				has_idea = IRE_the_troubles_improve_1
+			}
 		}
 
 		ai_will_do = {
@@ -1215,7 +1195,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = { remove_idea = IRE_the_troubles_improve_1 add_idea = IRE_the_troubles_improve_2 }	
+			swap_ideas = { remove_idea = IRE_the_troubles_improve_1 add_idea = IRE_the_troubles_improve_2 }
+			country_event = { days = 1 id = irelandtroublesfocus.2 }
+			set_country_flag = IRE_fix_troubles_bipartisan_focus
 		}
 	}
 	
@@ -1230,7 +1212,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			has_idea = IRE_the_troubles
+			OR = {
+				has_idea = IRE_the_troubles_improve_2
+			}
 		}
 
 		ai_will_do = {
@@ -1239,6 +1223,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = { remove_idea = IRE_the_troubles_improve_2 add_idea = IRE_the_troubles_improve_3 }
+			country_event = { days = 1 id = irelandtroublesfocus.3 }
+			set_country_flag = IRE_fix_troubles_propaganda_focus
 		}
 	}
 	
@@ -1253,7 +1239,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			has_idea = IRE_the_troubles
+			OR = {
+				has_idea = IRE_the_troubles_improve_3
+			}
 		}
 
 		ai_will_do = {
@@ -1261,7 +1249,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = { remove_idea = IRE_the_troubles_improve_3 add_idea = IRE_the_troubles_improve_4 }	
+			swap_ideas = { remove_idea = IRE_the_troubles_improve_3 add_idea = IRE_the_troubles_improve_4 }
+			country_event = { days = 1 id = irelandtroublesfocus.4 }
+			set_country_flag = IRE_fix_troubles_police_focus
 		}
 	}
 	
@@ -1277,7 +1267,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			has_idea = IRE_the_troubles
+			has_idea = IRE_the_troubles_improve_1
 		}
 
 		ai_will_do = {
@@ -1285,7 +1275,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = IRE_the_troubles_improve_2
+			swap_ideas = { remove_idea = IRE_the_troubles add_idea = IRE_the_troubles_improve_1 }
+			country_event = { days = 1 id = irelandtroublesfocus.5 }
 		}
 	}
 	
@@ -1300,7 +1291,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			has_idea = IRE_the_troubles
+			has_idea = IRE_the_troubles_improve_1
 		}
 
 		ai_will_do = {
@@ -1308,7 +1299,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = IRE_the_troubles_improve_2
+			country_event = { days = 1 id = irelandtroublesfocus.6 }
 		}
 	}
 	
