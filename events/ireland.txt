@@ -5,6 +5,7 @@ add_namespace = ireland
 add_namespace = irelandelection
 add_namespace = irelandtroubles
 add_namespace = irelandtroublesfocus
+add_namespace = irelandcivilwar
 
 ## ELECTION EVENTS ##
 
@@ -206,6 +207,19 @@ country_event = {
 		clr_country_flag = IRE_troubles_event_4
 		clr_country_flag = IRE_troubles_event_5
 		clr_country_flag = IRE_troubles_event_6
+		clr_country_flag = IRE_troubles_event_7
+		clr_country_flag = IRE_troubles_event_8
+		clr_country_flag = IRE_troubles_event_9
+		clr_country_flag = IRE_troubles_event_10
+		clr_country_flag = IRE_troubles_event_11
+		clr_country_flag = IRE_troubles_event_12
+		clr_country_flag = IRE_troubles_event_13
+		clr_country_flag = IRE_troubles_event_14
+		clr_country_flag = IRE_troubles_event_15
+		clr_country_flag = IRE_troubles_event_16
+		clr_country_flag = IRE_troubles_event_17
+		clr_country_flag = IRE_troubles_event_18
+		clr_country_flag = IRE_troubles_event_19
 		
 	}
 	
@@ -552,7 +566,7 @@ country_event = { #Police turn blind eye to IRA activity
 	option = {
 		name = "Fire the corrupt police!"
 		set_country_flag = IRE_troubles_event_8
-		add_popularity = { ideology = neutrality popularity = -0.1 }
+		add_popularity = { ideology = neutrality popularity = -0.01 }
 		add_political_power = -10
 	}
 }
@@ -595,7 +609,7 @@ country_event = { #IRA rallies
 	option = {
 		name = "Shut it down!"
 		set_country_flag = IRE_troubles_event_9
-		add_popularity = { ideology = neutrality popularity = -0.1 }
+		add_popularity = { ideology = neutrality popularity = -0.01 }
 		add_political_power = -10
 	}
 }
@@ -725,6 +739,144 @@ country_event = { #IRA police bust
 		add_political_power = 20
 	}
 }
+
+country_event = { #Civil war from lack of pp
+	id = irelandtroubles.14
+	title = "Civil War!"
+	desc = "We have always feared this day would come, for the IRA has finally organized and risen up against our 'oppressive' ways. Is it time to mobilize our army and take a stand, or resolve this peacefully without bloodshed? The choice is ours."
+	picture = GFX_report_event_generic_army
+	
+	trigger = {
+		NOT = { has_government = neutrality }
+		OR = {
+			has_idea = IRE_the_troubles
+			has_idea = IRE_the_troubles_improve_1
+			has_idea = IRE_the_troubles_improve_2
+			has_idea = IRE_the_troubles_improve_3
+			has_idea = IRE_the_troubles_improve_4
+		}
+		NOT = { has_country_flag = IRE_prolong_the_inevitable }
+		NOT = { has_country_flag = IRE_IRA_civil_war_pp }
+		has_political_power < -50
+	}
+	
+	mean_time_to_happen = { #revisit?
+		days = 1000
+		modifier = {
+			factor = 0.9
+			has_political_power < -50
+		}
+		modifier = {
+			factor = 0.8
+			has_political_power < -60
+		}
+		modifier = {
+			factor = 0.7
+			has_political_power < -70
+		}
+		modifier = {
+			factor = 0.6
+			has_political_power < -80
+		}
+		modifier = {
+			factor = 0.5
+			has_political_power < -90
+		}
+		modifier = {
+			factor = 0.4
+			has_political_power < -100
+		}
+		modifier = {
+			factor = 0.3
+			has_political_power < -110
+		}
+		modifier = {
+			factor = 0.2
+			has_political_power < -120
+		}
+		modifier = {
+			factor = 0.1
+			has_political_power < -130
+		}
+	}
+	
+	option = {
+		name = "We are ready to stand against the IRA."
+		hidden_effect = {
+			remove_ideas = IRE_the_troubles
+			remove_ideas = IRE_the_troubles_improve_1
+			remove_ideas = IRE_the_troubles_improve_2
+			remove_ideas = IRE_the_troubles_improve_3
+			remove_ideas = IRE_the_troubles_improve_4
+		}
+		if = {
+			limit = { neutrality < 0.2 }
+			start_civil_war = { ideology = neutrality size = 0.35 }
+		}
+		if = {
+			limit = { 
+				neutrality > 0.2 
+				neutrality < 0.4
+			}
+			start_civil_war = { ideology = neutrality size = 0.4 }
+		}
+		if = {
+			limit = { 
+				neutrality > 0.4 
+				neutrality < 0.6
+			}
+			start_civil_war = { ideology = neutrality size = 0.5 }
+		}
+		if = {
+			limit = { 
+				neutrality > 0.6 
+				neutrality < 0.8
+			}
+			start_civil_war = { ideology = neutrality size = 0.6 }
+		}
+		if = {
+			limit = { 
+				neutrality > 0.8
+			}
+			start_civil_war = { ideology = neutrality size = 0.75 }
+		}
+		set_country_flag = IRE_IRA_civil_war_pp
+	}
+	
+	option = {
+		name = "We must prolong the inevitable."
+		add_political_power = -50
+		country_event = { days = 31 id = irelandtroublesfocus.6 }
+		set_country_flag = IRE_prolong_the_inevitable
+	}
+}
+
+## CIVIL WAR EVENTS ##
+
+country_event = { #IRA divisions
+	id = irelandcivilwar.1
+	title = "Guerillas Join Our Struggle!"
+	desc = "As our civil war rages on, more and more guerillas lend their help towards the republican cause. On my brothers and sisters, to victory!"
+	picture = GFX_report_event_generic_army
+	
+	trigger = {
+		#has_country_flag = IRE_at_civil_war_focus #disabled until finished NF
+		has_government = neutrality
+		has_civil_war = yes
+		original_tag = IRE
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = "For the republic!"
+		load_oob = IRE_IRA
+	}
+}
+	
+
 
 ## FOCUS EVENTS ##
 
