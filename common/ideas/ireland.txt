@@ -315,6 +315,27 @@ ideas = {
 			}
 		}
 		
+		IRE_republic_restored = {
+		
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.25
+				drift_defence_factor = 0.25
+				enemy_justify_war_goal_time = 0.25
+			}
+		}
+		
 		IRE_rights_of_women_idea = {
 		
 			picture = IRE_rights_of_women_idea

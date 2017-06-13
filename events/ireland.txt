@@ -1254,14 +1254,14 @@ country_event = { #Ultimatum for NI
 		name = "We cannot risk war."
 		IRE = { transfer_state = 119 }
 		hidden_effect = {
-			IRE = { country_event = irelandtroublesfocus.10 days = 1 }
+			IRE = { country_event = { id = irelandtroublesfocus.10 days = 1 } }
 		}
 	}
 	
 	option = {
 		name = "Never!"
 		hidden_effect = {
-			IRE = { country_event = irelandtroublesfocus.9 days = 1 }
+			IRE = { country_event = { id = irelandtroublesfocus.9 days = 1 } }
 		}
 	}
 }
@@ -1319,8 +1319,8 @@ country_event = { #ENG folds
 	
 	option = {
 		name = "Finally!"
-		add_ideas = republic_restored
 		#revisit for holiday events?
+		swap_ideas = { remove_idea = IRE_enduring_republic add_idea = IRE_republic_restored }
 	}
 }
 

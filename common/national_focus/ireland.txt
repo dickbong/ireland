@@ -1400,8 +1400,8 @@ focus_tree = {
 				}
 				create_corps_commander = {
 					name = "Tom Barry" 
-					gfx = "Portrait_Ireland_Sean_Russel.dds" 
-					traits = { mountaineer } 
+					gfx = "Portrait_Ireland_Tom_barry.dds" 
+					traits = { ranger } 
 					skill = 5
 				}
 			}
