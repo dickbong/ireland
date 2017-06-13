@@ -46,3 +46,30 @@
  IRE_blue_boys_idea_desc:0 "Every good navy needs a lot of hardy seamen."
  IRE_more_drilling:0 "Hardened Drilling"
  IRE_more_drilling:0 "In the height of our war, our drilling has undergone major reforms in efficiency."
+ 
+ ## MINISTERS ##
+ 
+ ## Political advisors
+ IRE_generic_fascist_demagogue:0 "Thomas F. O'Higgins"
+ IRE_generic_democratic_reformer:0 "Donal Buckley"
+ IRE_generic_communist_revolutionary:0 "Bill Scott"
+ IRE_sean_lemass:0 "Seán Lemass"
+ IRE_douglas_hyde:0 "Douglas Hyde"
+ IRE_sean_t_okelly:0 "Seán T. O'Kelly"
+ 
+ #Theorists
+ IRE_ernest_walton:0 "Ernest Walton"
+ 
+ 
+ IRE_liam_archer:0 "Liam Archer"
+ IRE_michael_brennan:0 "Michael Brennan"
+ IRE_dan_mckenna:0 "Daniel McKenna"
+ IRE_oscar_traynor:0 "Oscar Traynor"
+ IRE_michael_joe_costello:0 "Michael Joe Costello"
+ IRE_h_t_green:0 "H.T. Green"
+ IRE_p_a_mulcahy:0 "P.A. Mulcahy"
+ IRE_john_byrne:0 "John O'Byrne"
+ IRE_s_muiris:0 "S. O'Muiris"
+ IRE_frank_fahy:0 "Frank Fahy"
+ IRE_richard_james_mulcahy:0 "Richard James Mulcahy"
+ IRE_a_t_lawlor:0 "A.T. Lawlor"

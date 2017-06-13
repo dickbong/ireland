@@ -598,9 +598,35 @@ ideas = {
 				air_bombing_targetting = 0.5
 			}
 		}
+		
+		### ULSTER
+		
+		ULS_conscription_crisis = {
+		
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = ULS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.4
+			}
+		}
 	}
 
 	political_advisor = {
+	
+	# LIST
+	# Sean T O Kelly
+	# Sean Lemass
+	# Douglas Hyde
 
 		IRE_sean_t_okelly = {
 
@@ -634,21 +660,15 @@ ideas = {
 			
 			traits = { popular_figurehead }
 		}
-
-		IRE_sean_ceallaigh = {
-
-			picture = generic_political_advisor_europe_1
-			
-			allowed = {
-				original_tag = IRE
-			}
-			
-			traits = { smooth_talking_charmer }
-		}
 	}
 	
 
 	army_chief = {
+	
+	#LIST
+	#Liam Archer
+	#Richard James Mulcahy
+	#Oscar Traynor
 		
 		IRE_liam_archer = {
 			picture = generic_army_europe_2
@@ -676,11 +696,30 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+
+		IRE_oscar_traynor = {
+			
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { army_infantry_2 }
 		}		
 
 	}
 
 	air_chief = {
+	
+	#LIST
+	#HT Green
+	#PA Mulcahy
 		
 		IRE_h_t_green = {
 			picture = generic_air_europe_1
@@ -712,6 +751,10 @@ ideas = {
 	}
 
 	navy_chief = {
+	
+	#LIST
+	#John Byrne
+	#S Muiris
 		
 		IRE_john_byrne = {
 
@@ -746,6 +789,12 @@ ideas = {
 	}
 
 	high_command = {
+	
+	#LIST
+	#Dan Mckenna
+	#Frank Fahy
+	#Michael Brennan
+	#AT Lawlor
 
 		IRE_dan_mckenna = {
 			picture = generic_army_europe_1
@@ -808,6 +857,12 @@ ideas = {
 	}
 
 	theorist = {
+	
+	#LIST
+	#Michael Joe Costello
+	#Oscar Traynor
+	#Ernest Walton
+	
 		IRE_michael_joe_costello = {
 			
 			picture = generic_army_europe_2
@@ -823,7 +878,7 @@ ideas = {
 			traits = { military_theorist }
 		}
 		
-		IRE_oscar_traynor = {
+		IRE_ernest_walton = {
 			
 			picture = generic_political_advisor_europe_2
 			
@@ -832,15 +887,14 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				nuclear = 0.10
 			}
 			
-			traits = { air_warfare_theorist }
+			traits = { nuclear_scientist }
 		}
-
 	}
-
 
 	# TECHNOLOGY
 
 }
+

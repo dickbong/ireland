@@ -170,4 +170,11 @@ create_corps_commander = {
 	skill = 2
 }
 
+create_navy_leader = {
+	name = "Seamus O'Muiris"
+		picture = "Portrait_Britain_John_Tovey.dds"
+	traits = { superior_tactician }
+	skill = 3
+}
+
 ## 1939 ##
