@@ -1435,7 +1435,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			ENG = { country_event = { id = irelandtroublesfocus.8 days = 1 }
+			ENG = { country_event = { id = irelandtroublesfocus.8 days = 1 } }
 		}
 	}
 	
