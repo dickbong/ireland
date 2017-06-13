@@ -17,6 +17,8 @@ set_convoys = 10
 
 set_cosmetic_tag = IRE_UK #irish free state
 
+add_opinion_modifier = { target = ULS modifier = hostile_status }	
+
 ENG = { puppet = IRE }
 
 if = {
