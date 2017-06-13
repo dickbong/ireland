@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "IRA Guerillas"		
+	name = "IRA Guerrillas"		
 	# Ireland did not have full divisions until 1941, but their garrison command 
 	#	was division strength by 1939
 	regiments = {
@@ -15,8 +15,8 @@
 
 units = {
 	division = {
-		name = "IRA Guerilla Division"
-		division_template = "IRA Guerillas"
+		name = "IRA Guerrilla Division"
+		division_template = "IRA Guerrillas"
 		location = 3396
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3

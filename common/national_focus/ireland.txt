@@ -1354,6 +1354,7 @@ focus_tree = {
 			remove_ideas = IRE_the_troubles
 			add_timed_idea = { idea = IRE_hostile_takeover_idea days = 365 }	
 			custom_effect_tooltip = IRE_hostile_takeover_tt
+			set_country_flag = IRE_hostile_takeover_flag
 		}
 	}
 	
@@ -1418,7 +1419,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			
+			NOT = {
+				is_in_faction_with = ENG	
+			}
+			has_government = neutrality
+			has_civil_war = no	
 		}
 
 		ai_will_do = {
@@ -1430,7 +1435,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			remove_ideas = IRE_the_troubles
+			ENG = { country_event = { id = irelandtroublesfocus.8 days = 1 }
 		}
 	}
 	
@@ -1450,6 +1455,8 @@ focus_tree = {
 			}
 			ENG = { has_war_with = GER }
 			GER = { has_government = fascism }
+			has_government = neutrality
+			has_civil_war = no
 		}
 
 		ai_will_do = {
@@ -1462,7 +1469,8 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = IRE_s_plan_idea
-			set_country_flag = IRE_s_plan_flag
+			#set_country_flag = IRE_s_plan_flag #coming soon
+			GER = { country_event = { id = irelandtroublesfocus.11 days = 1 } }
 		}
 	}
 }

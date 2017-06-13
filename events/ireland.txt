@@ -643,7 +643,7 @@ country_event = { #The Troubles Worsen
 country_event = { #Sinn Fein Exposed for IRA plot
 	id = irelandtroubles.11
 	title = "Sinn Féin Exposed For IRA Co-op"
-	desc = "If we cannot keep our political power over -50, we have a higher and higher chance of there being an IRA revolt. That being so, we must do all in our power to fix this problem."
+	desc = "Recently, Sinn Féin has been exposed for endorsing IRA terror attacks. This has exponentially lowered loyalty to their poltical party. If more scandals like this happen, we will be able to sweep every election."
 	picture = GFX_report_event_generic_riot
 	
 	trigger = {
@@ -855,8 +855,8 @@ country_event = { #Civil war from lack of pp
 
 country_event = { #IRA divisions
 	id = irelandcivilwar.1
-	title = "Guerillas Join Our Struggle!"
-	desc = "As our civil war rages on, more and more guerillas lend their help towards the republican cause. On my brothers and sisters, to victory!"
+	title = "Guerrillas Join Our Struggle!"
+	desc = "As our civil war rages on, more and more Guerrillas lend their help towards the republican cause. On my brothers and sisters, to victory!"
 	picture = GFX_report_event_generic_army
 	
 	trigger = {
@@ -864,6 +864,7 @@ country_event = { #IRA divisions
 		has_government = neutrality
 		has_civil_war = yes
 		original_tag = IRE
+		NOT = { has_country_flag = IRE_IRA_guerrilla_event }
 	}
 	
 	mean_time_to_happen = {
@@ -872,7 +873,177 @@ country_event = { #IRA divisions
 	
 	option = {
 		name = "For the republic!"
-		load_oob = IRE_IRA
+		set_country_flag = IRE_IRA_guerrilla_event
+		hidden_effect = {
+			if = { 
+				limit = { ROOT = { owns_state = 113 } } #Dublin
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Dublin } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 134 } } #Leitrim
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Leitrim } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 135 } } #Waterford
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Waterford } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 743 } } #Cork
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Cork } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 744 } } #Kerry
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Kerry } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 745 } } #Clare
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Clare } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 746 } } #Tipperary
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Tipperary } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 747 } } #Galway
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Galway } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 748 } } #Mayo
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Mayo } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 749 } } #Sligo
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Sligo } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 750 } } #Donegal
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Donegal } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 751 } } #Kildare
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Kildare } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 752 } } #Wicklow & Wexford
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Wicklow_Wexford } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 753 } } #Kilkenny
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Kilkenny } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 754 } } #Offaly
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Offaly } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 755 } } #Longford & Westmeath
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Longford } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 756 } } #Meath
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Meath } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 757 } } #Louth
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Louth } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 758 } } #Cavan
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Cavan } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 759 } } #Limerick
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Limerick } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 760 } } #Roscommon
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Roscommon } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 761 } } #Laois
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Laois } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 762 } } #Carlow
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Carlow } 
+					50 = {  } 
+				}
+			}
+			if = { 
+				limit = { ROOT = { owns_state = 763 } } #Monaghan
+				random_list = { 
+					50 = { load_oob = IRE_IRA_Monaghan } 
+					50 = {  } 
+				}
+			}
+		}
 	}
 }
 	
@@ -1007,4 +1178,166 @@ country_event = { #Second Irish Civil War -- Military Focus
 	#	add_political_power = -200
 	#	swap_ideas = { remove_idea = IRE_the_troubles_improve_1 add_idea = IRE_the_troubles_improve_2 }
 	#}
+}
+
+country_event = { #Second Irish Civil War -- Military Focus
+	id = irelandtroublesfocus.7
+	title = "Second Irish Civil War"
+	desc = "Now that Sinn Féin has finally come to power, the supporters of Fianna Fail have taken up arms to defend their 'republic.' How pitiful. The time is now to strike for the republic!"
+	picture = GFX_report_event_generic_army
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = IRE_hostile_takeover_flag
+		NOT = { has_idea = IRE_hostile_takeover_idea }
+	}
+	
+	option = {
+		name = "We are ready to stand for the republic!"
+		set_politics = { ruling_party = neutrality elections_allowed = yes }	
+		if = {
+			limit = { democratic < 0.2 }
+			start_civil_war = { ideology = neutrality size = 0.35 }
+		}
+		if = {
+			limit = { 
+				democratic > 0.2 
+				democratic < 0.4
+			}
+			start_civil_war = { ideology = neutrality size = 0.4 }
+		}
+		if = {
+			limit = { 
+				democratic > 0.4 
+				democratic < 0.6
+			}
+			start_civil_war = { ideology = neutrality size = 0.5 }
+		}
+		if = {
+			limit = { 
+				democratic > 0.6 
+				democratic < 0.8
+			}
+			start_civil_war = { ideology = neutrality size = 0.6 }
+		}
+		if = {
+			limit = { 
+				democratic > 0.8
+			}
+			start_civil_war = { ideology = neutrality size = 0.75 }
+		}
+	}
+	
+	#option = {
+	#	name = "We must prolong the inevitable."
+	#	add_political_power = -50
+	#	country_event = { days = 31 id = irelandtroublesfocus.6 }
+	#	set_country_flag = IRE_troubles_paramilitary_groups
+	#}
+	
+	#option = {
+	#	name = "We can end the bloodshed diplomatically."
+	#	trigger = { has_political_power > 200 }
+	#	add_political_power = -200
+	#	swap_ideas = { remove_idea = IRE_the_troubles_improve_1 add_idea = IRE_the_troubles_improve_2 }
+	#}
+}
+
+country_event = { #Ultimatum for NI
+	id = irelandtroublesfocus.8
+	title = "Ultimatum for Northern Ireland"
+	desc = "The new administration of Ireland has sent us an ultimatum. Either give them Northern Ireland and stop the Partition, or they will have to engage in war for the republic. How should we respond."
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	
+	option = {
+		name = "We cannot risk war."
+		IRE = { transfer_state = 119 }
+		hidden_effect = {
+			IRE = { country_event = irelandtroublesfocus.10 days = 1 }
+		}
+	}
+	
+	option = {
+		name = "Never!"
+		hidden_effect = {
+			IRE = { country_event = irelandtroublesfocus.9 days = 1 }
+		}
+	}
+}
+
+country_event = { #ENg refuses
+	id = irelandtroublesfocus.9
+	title = "[ENG.GetName] Refuses!"
+	desc = "In response to our ultimatum for Northern Ireland, [ENG.GetName] has refused to give up any land and are ready to defend Northern Ireland. What shall we do?"
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	
+	option = {
+		name = "Press the claim!"
+		ai_chance = {
+			factor = 90
+		}
+		create_wargoal = { type = annex_everything target = ENG }
+		add_political_power = -50
+		add_ai_strategy = {
+			type = antagonize
+			id = "ENG"
+			value = 200
+		}
+		add_ai_strategy = {
+			type = conquer
+			id = "ENG"
+			value = 50
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = ENG
+			generator = { 119 }
+		}
+	}
+	
+	option = {
+		name = "Better to let it go."
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_in_faction_with = GER
+			}
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = { #ENG folds
+	id = irelandtroublesfocus.10
+	title = "[ENG.GetName] Folds!"
+	desc = "In response to our ultimatum for Northern Ireland, [ENG.GetName] has folded and will give up Northern Ireland to our control. This is a glorious day for the republic!"
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	
+	option = {
+		name = "Finally!"
+		add_ideas = republic_restored
+		#revisit for holiday events?
+	}
+}
+
+country_event = { #S-PLAN
+	id = irelandtroublesfocus.11
+	title = "The S-Plan"
+	desc = "[IRE.GetName] has recently shared military intelligence with the Abwehr noting weak-points in British infrastructure. Shall we exploit this opportunity?"
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	
+	option = {
+		name = "Of course."
+		add_ideas = GER_s_plan_idea
+		add_ai_strategy = {
+			type = befriend
+			id = "IRE"
+			value = 50
+		}
+	}
 }

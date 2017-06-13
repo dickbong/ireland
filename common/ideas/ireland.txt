@@ -269,7 +269,7 @@ ideas = {
 		}
 		
 		IRE_s_plan_idea = {
-			picture = FRA_scw_intervention_nationalists_focus
+			picture = generic_fascism_drift_bonus
 
 			allowed = {
 				original_tag = IRE
@@ -280,14 +280,17 @@ ideas = {
 			}
 
 			removal_cost = -1
+			
+			on_add = {
+				add_ai_strategy = {
+					type = befriend
+					id = "GER"			
+					value = 10
+				}
+			}
 
 			modifier = {
 				fascism_acceptance = 10
-				#ai_strategy = {
-				#	type = befriend
-				#	id = "GER"			
-				#	value = 10
-				#}
 			}
 		}
 		
@@ -550,6 +553,28 @@ ideas = {
 
 			modifier = {
 				training_time_army_factor = -0.5
+			}
+		}
+		
+		GER_s_plan_idea = {
+		
+			picture = strategic_bombing_focus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_detection = 0.2
+				air_mission_efficiency = 0.3
+				air_accidents = -0.3
+				air_bombing_targetting = 0.5
 			}
 		}
 	}
