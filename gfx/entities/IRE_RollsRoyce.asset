@@ -1,0 +1,30 @@
+entity = {
+	name = "ENG_light_armor_entity"
+	pdxmesh = "IRE_RollsRoyce_mesh"
+}
+
+entity = {
+	name = "IRE_light_armor_entity"
+	pdxmesh = "IRE_RollsRoyce_mesh"
+}
+entity = {
+	name = "IRE_medium_armor_entity"
+	pdxmesh = "IRE_RollsRoyce_mesh"
+}
+entity = {
+	name = "IRE_heavy_armor_entity"
+	pdxmesh = "IRE_RollsRoyce_mesh"
+}
+
+entity = {
+	name = "ULS_light_armor_entity"
+	pdxmesh = "IRE_RollsRoyce_mesh"
+}
+entity = {
+	name = "ULS_medium_armor_entity"
+	pdxmesh = "IRE_RollsRoyce_mesh"
+}
+entity = {
+	name = "ULS_heavy_armor_entity"
+	pdxmesh = "IRE_RollsRoyce_mesh"
+}
