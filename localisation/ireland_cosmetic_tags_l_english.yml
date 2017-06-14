@@ -2,5 +2,9 @@
  ## IRISH FREE STATE ##
  IRE_UK_democratic:0 "Irish Free State"
  IRE_UK_democratic_DEF:0 "The Irish Free State"
+ IRE_UK_democratic_ADJ: "Irish Free State"
+ 
+ 
  IRE_resurrection_fascism:0:0 "Resurrectionist Ireland"
  IRE_resurrection_fascism_DEF:0 "Resurrectionist Ireland"
+ IRE_resurrection_fascism_ADJ: "Irish Resurrectionist"
