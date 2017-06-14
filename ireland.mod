@@ -3,4 +3,4 @@ path="mod/ireland/"
 tags={
 	"Gameplay"
 }
-supported_version="1.3.3"
+supported_version="1.4"
