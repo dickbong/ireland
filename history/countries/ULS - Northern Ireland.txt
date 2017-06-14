@@ -42,11 +42,11 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 97
+			popularity = 55 #real life 65%
 		}
 
 		fascism = {
-			popularity = 1
+			popularity = 10 #taken 10 from the unionist 65%
 		}
 		
 		communism = {
@@ -54,7 +54,7 @@ set_politics = {
 		}
 		
 		neutrality = {
-			popularity = 1
+			popularity = 35
 		}
 	}
 	
@@ -74,6 +74,37 @@ create_country_leader = { #uup
 	ideology = conservatism
 	traits = {
 		#
+	}
+}
+
+create_country_leader = { #nationalist party
+	name = "Joe Devlin"
+	desc = "JOE_DEVLIN_DESC"
+	picture = "gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+	expire = "1965.1.1"
+	ideology = centrism # should really be nationalist
+	traits = {
+	}
+}
+
+create_country_leader = { #protestant league
+	name = "Samuel Hanna" # Or Dorothy Harnett
+	desc = "SAMUEL_HANNA_DESC"
+	picture = "gfx/leaders/USA/Portrait_USA_William_Dudley_Pelley.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	}
+}
+
+create_country_leader = { #Communist
+	name = "Sean Murray" 
+	desc = "SEAN_MURRAY_DESC"
+	picture = "gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		
 	}
 }
 
