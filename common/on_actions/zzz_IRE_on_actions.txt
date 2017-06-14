@@ -1,0 +1,67 @@
+on_actions = {
+
+	#ROOT is subject FROM is previous overlord
+	on_subject_free = {
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { tag = ULS }
+					#FROM = { tag = ENG }
+				} 
+				drop_cosmetic_tag = yes
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { tag = IRE }
+					#FROM = { tag = ENG }
+				} 
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { tag = ULS }
+					FROM = { tag = ENG }
+				} 
+				set_cosmetic_tag = ULS_uk
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { tag = IRE }
+					FROM = { tag = ENG }
+				} 
+				set_cosmetic_tag = IRE_uk
+			}
+		}
+	}
+	
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { tag = ULS }
+					FROM = { tag = ENG }
+				} 
+				set_cosmetic_tag = ULS_uk
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { tag = IRE }
+					FROM = { tag = ENG }
+				} 
+				set_cosmetic_tag = IRE_uk
+			}
+		}
+	}	
+}

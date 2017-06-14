@@ -15,14 +15,16 @@
  IRE_communism:0 "Irish People's Union"
  IRE_communism_DEF:0 "The Irish People's Union"
  IRE_communism_ADJ: "Irish People's"
+ 
+ 
  #ULSTER
  ULS_fascism:0 "Ulster"
  ULS_fascism_DEF:0 "Ulster"
  ULS_fascism_ADJ: "Ulster"
  
- ULS_democratic:0 "Northern Ireland"
- ULS_democratic_DEF:0 "Northern Ireland"
- ULS_democratic_ADJ: "Northern Irish"
+ ULS_democratic:0 "Ulster"
+ ULS_democratic_DEF:0 "Ulster"
+ ULS_democratic_ADJ: "Ulster"
  
  ULS_neutrality:0 "Ulster"
  ULS_neutrality_DEF:0 "Ulster"
@@ -31,3 +33,20 @@
  ULS_communism:0 "Ulster Socialist Republic"
  ULS_communism_DEF:0 "The Ulster Socialist Republic"
  ULS_communism_ADJ: "Ulster Socialist"
+ 
+ #ULSTER as a UK subject 
+ ULS_uk_fascism:0 "Ulster"
+ ULS_uk_fascism_DEF:0 "Ulster"
+ ULS_uk_fascism_ADJ: "Ulster"
+
+ ULS_uk_democratic:0 "Northern Ireland"
+ ULS_uk_democratic_DEF:0 "Northern Ireland"
+ ULS_uk_democratic_ADJ: "Northern Irish"
+
+ ULS_uk_neutrality:0 "Ulster"
+ ULS_uk_neutrality_DEF:0 "Ulster"
+ ULS_uk_neutrality_ADJ: "Ulster"
+
+ ULS_uk_communism:0 "Ulster Socialist Republic"
+ ULS_uk_communism_DEF:0 "The Ulster Socialist Republic"
+ ULS_uk_communism_ADJ: "Ulster Socialist"
