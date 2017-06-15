@@ -50,3 +50,21 @@
  ULS_uk_communism:0 "Ulster Socialist Republic"
  ULS_uk_communism_DEF:0 "The Ulster Socialist Republic"
  ULS_uk_communism_ADJ: "Ulster Socialist"
+ 
+ #ULSTER as the Kingdom of Ireland
+ 
+ ULS_koi_fascism:0 "Kingdom of Ireland"
+ ULS_koi_fascism_DEF:0 "The Kingdom of Ireland"
+ ULS_koi_fascism_ADJ: "Royal Irish"
+
+ ULS_koi_democratic:0 "Kingdom of Ireland"
+ ULS_koi_democratic_DEF:0 "The Kingdom of Ireland"
+ ULS_koi_democratic_ADJ: "Royal Irish"
+
+ ULS_koi_neutrality:0 "Irish Republic"
+ ULS_koi_neutrality_DEF:0 "The Irish Republic"
+ ULS_koi_neutrality_ADJ: "Irish Republican"
+
+ ULS_koi_communism:0 "Irish People's Union"
+ ULS_koi_communism_DEF:0 "The Irish People's Union"
+ ULS_koi_communism_ADJ: "Irish People's"

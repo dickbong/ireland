@@ -1,0 +1,312 @@
+focus_tree = {
+	id = ulster_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ULS
+		}
+	}
+	
+	default = no
+
+	
+	focus = {
+		id = ULS_belfast_shipyards
+		icon = goal_generic_construct_naval_dockyard
+		x = 0
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 1
+			#	has_completed_focus = RAJ_tata_steel
+			#}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		available = {
+			has_war = yes
+		}
+
+		completion_reward = {
+			}
+	}
+	
+	focus = {
+		id = ULS_stormont_parliament
+		icon = GFX_goal_generic_support_democracy
+
+		x = 5
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	
+	
+	
+	focus = {
+		id = ULS_open_the_border
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = ULS_stormont_parliament
+		prerequisite = { focus = ULS_stormont_parliament }
+		mutually_exclusive = {
+			focus = ULS_reaffirm_partition
+		}
+		
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		x = -2
+		y = 1
+		cost = 10
+	}
+	
+	focus = {
+		id = ULS_united_ireland
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ULS_open_the_border
+		prerequisite = { focus = ULS_open_the_border }
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			IRE = { puppet = ULS }
+			#add_autonomy_ratio = {
+			#	value = 0.1
+			#	#set_autonomy = { target = ULS autonomy_state = autonomy_free }
+			#}
+		}
+	}
+	
+	focus = {
+		id = ULS_reaffirm_partition
+		icon = GFX_goal_generic_trade
+		relative_position_id = ULS_stormont_parliament
+		prerequisite = { focus = ULS_stormont_parliament }
+		mutually_exclusive = {
+			focus = ULS_open_the_border
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = ULS_orange_order
+		icon = GFX_focus_generic_home_defense
+		relative_position_id = ULS_reaffirm_partition
+		prerequisite = { focus = ULS_reaffirm_partition }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	
+	focus = {
+		id = ULS_ulster_third_way
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_orange_order
+		prerequisite = { focus = ULS_orange_order }
+		mutually_exclusive = {
+			focus = ULS_british_heritage
+		}
+		
+		x = 4
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_threat = 1
+			add_ideas = fascist_influence
+		}
+	}
+	
+	focus = {
+		id = ULS_british_heritage
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		relative_position_id = ULS_orange_order
+		prerequisite = { focus = ULS_orange_order }
+		mutually_exclusive = {
+			focus = ULS_ulster_third_way
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = democratic_influence
+		}
+	}
+	
+	focus = {
+		id = ULS_for_god_and_ulster
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_ulster_third_way
+		prerequisite = { 
+			focus = ULS_ulster_third_way
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			763 = { add_claim_by = ULS }
+			750 = { add_claim_by = ULS }
+		}
+	}
+	
+	focus = {
+		id = ULS_sever_tires
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		relative_position_id = ULS_for_god_and_ulster
+		prerequisite = { focus = ULS_for_god_and_ulster }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ULS_kingdom_of_ireland
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_ulster_third_way
+		prerequisite = { 
+			focus = ULS_ulster_third_way
+			focus = ULS_british_heritage
+		}
+		
+		available = {
+			IRE = { exists = no }
+			113 = { is_owned_by = ULS }
+			119 = { is_owned_by = ULS }
+			134 = { is_owned_by = ULS }
+			135 = { is_owned_by = ULS }
+			743 = { is_owned_by = ULS }
+			744 = { is_owned_by = ULS }
+			745 = { is_owned_by = ULS }
+			746 = { is_owned_by = ULS }
+			747 = { is_owned_by = ULS }
+			748 = { is_owned_by = ULS }
+			749 = { is_owned_by = ULS }
+			750 = { is_owned_by = ULS }
+			751 = { is_owned_by = ULS }
+			752 = { is_owned_by = ULS }
+			753 = { is_owned_by = ULS }
+			754 = { is_owned_by = ULS }
+			755 = { is_owned_by = ULS }
+			756 = { is_owned_by = ULS }
+			757 = { is_owned_by = ULS }
+			758 = { is_owned_by = ULS }
+			759 = { is_owned_by = ULS }
+			760 = { is_owned_by = ULS }
+			761 = { is_owned_by = ULS }
+			762 = { is_owned_by = ULS }
+			763 = { is_owned_by = ULS }
+		}
+		
+		x = -2
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_cosmetic_tag = ULS_koi
+		}
+	}
+	
+	
+
+}
