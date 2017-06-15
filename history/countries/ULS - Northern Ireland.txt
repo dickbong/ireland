@@ -2,13 +2,13 @@
 
 capital = 119
 
-oob = ""
+oob = "ULS_1936"
 
 set_research_slots = 3
 
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
+	#infantry_weapons1 = 1
 }
 
 ENG = { puppet = ULS }
