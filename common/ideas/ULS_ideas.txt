@@ -1,0 +1,24 @@
+ideas = {
+
+	country = {
+		ULS_religious_sectarianism = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+			
+			modifier = {
+				conscription_factor = -0.4
+				unity_factor = -0.4
+			}
+		}
+	}
+}

@@ -97,11 +97,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			hidden_effect = {
+				set_autonomy = {
+					target = ULS
+					autonomy_state = autonomy_free
+				}			
+			}
+			drop_cosmetic_tag = yes
 			IRE = { puppet = ULS }
-			#add_autonomy_ratio = {
-			#	value = 0.1
-			#	#set_autonomy = { target = ULS autonomy_state = autonomy_free }
-			#}
 		}
 	}
 	
@@ -175,8 +178,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_threat = 1
 			add_ideas = fascist_influence
+			
+			add_autonomy_ratio = {
+				value = 0.1
+				localization = ULS_ulster_third_way
+			}
 		}
 	}
 	
@@ -223,10 +230,15 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		
 
 		completion_reward = {
 			763 = { add_claim_by = ULS }
 			750 = { add_claim_by = ULS }
+			add_autonomy_ratio = {
+					value = 0.1
+					localization = ULS_for_god_and_ulster
+			}
 		}
 	}
 	
@@ -250,6 +262,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			set_autonomy = {
+				target = ULS
+				autonomy_state = autonomy_free
+			}
 		}
 	}
 	
