@@ -639,12 +639,13 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.10
 				drift_defence_factor = 0.6
+				autonomy_gain = 0.1
 			}
 		}
 		
 		IRE_constitution_fascism = {
 		
-			picture = HUN_treaty_of_trianon
+			picture = generic_fascism_drift_bonus
 
 			allowed = {
 				original_tag = IRE
@@ -661,12 +662,13 @@ ideas = {
 				drift_defence_factor = 0.3
 				fascism_drift = 0.02
 				fascism_acceptance = 5
+				autonomy_gain = 0.2
 			}
 		}
 		
 		IRE_constitution_current_democratic = {
 		
-			picture = HUN_treaty_of_trianon
+			picture = generic_democratic_drift_bonus
 
 			allowed = {
 				original_tag = IRE
@@ -682,12 +684,13 @@ ideas = {
 				political_power_factor = -0.10
 				drift_defence_factor = 0.7
 				democratic_acceptance = 5
+				autonomy_gain = 0.2
 			}
 		}
 		
 		IRE_constitution_democratic = {
 		
-			picture = HUN_treaty_of_trianon
+			picture = generic_democratic_drift_bonus
 
 			allowed = {
 				original_tag = IRE
@@ -704,12 +707,13 @@ ideas = {
 				drift_defence_factor = 0.3
 				democratic_drift = 0.02
 				democratic_acceptance = 5
+				autonomy_gain = 0.2
 			}
 		}
 		
 		IRE_constitution_communism = {
 		
-			picture = HUN_treaty_of_trianon
+			picture = generic_communism_drift_bonus
 
 			allowed = {
 				original_tag = IRE
@@ -726,6 +730,66 @@ ideas = {
 				drift_defence_factor = 0.3
 				communism_drift = 0.02
 				communism_acceptance = 5
+				autonomy_gain = 0.2
+			}
+		}
+		IRE_exec_auth = {
+		
+			picture = ast_abandon_the_westminster_system
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.10
+				autonomy_gain = 0.15
+			}
+		}
+		
+		IRE_keep_monarch = {
+		
+			picture = stiff_upper_lip
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.10
+				autonomy_gain = -0.15
+			}
+		}
+		
+		IRE_state_of_emergency_idea = {
+		
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = 0.25
+				political_power_factor = 0.1
 			}
 		}
 

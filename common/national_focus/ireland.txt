@@ -1151,7 +1151,7 @@ focus_tree = {
 		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { }
 		mutually_exclusive = { focus = IRE_give_into_demands }
-		x = 13
+		x = 14
 		y = 0
 		cost = 10
 
@@ -1178,7 +1178,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = IRE_fix_troubles_1 }
 		mutually_exclusive = { focus = IRE_fix_troubles_military_action }
-		x = 12
+		x = 13
 		y = 1
 		cost = 10
 
@@ -1205,7 +1205,7 @@ focus_tree = {
 		id = IRE_fix_troubles_3
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = IRE_fix_troubles_2 }
-		x = 12
+		x = 13
 		y = 2
 		cost = 10
 
@@ -1232,7 +1232,7 @@ focus_tree = {
 		id = IRE_fix_troubles_4
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = IRE_fix_troubles_3 }
-		x = 13
+		x = 14
 		y = 3
 		cost = 10
 
@@ -1260,7 +1260,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = IRE_fix_troubles_1 }
 		mutually_exclusive = { focus = IRE_fix_troubles_2 }
-		x = 14
+		x = 15
 		y = 1
 		cost = 10
 
@@ -1284,7 +1284,7 @@ focus_tree = {
 		id = IRE_fix_troubles_stamping_out_IRA
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = IRE_fix_troubles_military_action }
-		x = 14
+		x = 15
 		y = 2
 		cost = 20
 
@@ -1333,7 +1333,7 @@ focus_tree = {
 		id = IRE_hostile_takeover
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus = IRE_give_into_demands }
-		x = 16
+		x = 17
 		y = 1
 		cost = 10
 
@@ -1363,7 +1363,7 @@ focus_tree = {
 		id = IRE_inviting_IRA_generals
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = IRE_hostile_takeover }
-		x = 16
+		x = 17
 		y = 2
 		cost = 10
 
@@ -1413,7 +1413,7 @@ focus_tree = {
 		id = IRE_ultimatum_for_northern_ireland
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = IRE_inviting_IRA_generals }
-		x = 15
+		x = 16
 		y = 3
 		cost = 10
 
@@ -1887,7 +1887,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			
+			ENG = { has_idea = ENG_george_vi }
+			NOT = { ENG = { has_idea = ENG_king_edward } }
 		}
 
 		ai_will_do = {
@@ -1895,7 +1896,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = IRE_exec_authority
+			country_event = { id = irelandmainfocus.1 days = 1 }
+			add_ideas = IRE_exec_auth
+			ENG = { add_opinion_modifier = { target = IRE modifier = executive_authority_modifier }	}
 		}
 	}
 	
@@ -1921,6 +1924,21 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = IRE_keep_monarch
+			if = { 
+				limit = {
+					NOT = { ENG = { has_idea = george_v } }
+					ENG = { has_idea = ENG_george_vi }
+				}
+				add_ideas = ENG_george_vi
+			}
+			if = { 
+				limit = {
+					ENG = { has_idea = george_v }
+				}
+				add_ideas = george_v
+			}
+			set_country_flag = keep_monarch_powers_focus
+			ENG = { add_opinion_modifier = { target = IRE modifier = keep_monarch_modifier }	}
 		}
 	}
 
@@ -1943,7 +1961,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = IRE_waiting_for_referendum
+			add_country_flag = IRE_constituional_referendum_flag
+			custom_effect_tooltip = IRE_constituional_referendum_tt
 		}
 	}
 	
@@ -1966,7 +1986,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = IRE_state_of_emergency_idea
 		}
 	}
 	
@@ -1991,7 +2011,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = neutrality_idea
 		}
 	}
 	
@@ -2014,7 +2034,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = deterrence
 		}
 	}
 	
@@ -2407,6 +2427,7 @@ focus_tree = {
 		id = IRE_school_recruitment
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = IRE_our_struggle }
+		prerequisite = { focus = IRE_state_of_emergency }
 		x = 21
 		y = 5
 		cost = 10
@@ -2524,6 +2545,7 @@ focus_tree = {
 		id = IRE_support_trotsky
 		icon = GFX_goal_support_fourth_int
 		prerequisite = { focus = IRE_irish_partisans }
+		prerequisite = { focus = IRE_state_of_emergency }
 		x = 29
 		y = 5
 		cost = 10
