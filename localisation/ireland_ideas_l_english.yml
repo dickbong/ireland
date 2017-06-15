@@ -45,7 +45,16 @@
  IRE_blue_boys_idea:0 "Blue Boys"
  IRE_blue_boys_idea_desc:0 "Every good navy needs a lot of hardy seamen."
  IRE_more_drilling:0 "Hardened Drilling"
- IRE_more_drilling:0 "In the height of our war, our drilling has undergone major reforms in efficiency."
+ IRE_more_drilling_desc:0 "In the height of our war, our drilling has undergone major reforms in efficiency."
+ ## CONSTITUION TREE ##
+ IRE_constitution:0 "Drafting Constituion"
+ IRE_constitution_desc:0 "Currently our government is drafting a new constitution."
+ IRE_constitution_fascism:0 "Fascist Leaning Draft"
+ IRE_constitution_fascism_desc:0 "Our draft constitution looks to be leaning towards fascism."
+ IRE_constitution_communism:0 "Communist Leaning Draft"
+ IRE_constitution_communism_desc:0 "Our draft constitution looks to be leaning towards communism."
+ IRE_constitution-democratic:0 "Democratic Leaning Draft"
+ IRE_constitution_democratic_desc:0 "Our draft constitution looks to be leaning towards democracy."
  
  ## MINISTERS ##
  

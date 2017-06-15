@@ -1,0 +1,16 @@
+spriteTypes = {	
+	
+	##IRE TANKS##
+	
+	SpriteType = {
+		name = "GFX_IRE_gwtank_medium"
+		texturefile = "gfx/interface/technologies/IRE_gw_tank.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_IRE_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/IRE_basic_light_tank.png"
+	}
+	
+	
+}

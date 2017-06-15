@@ -1,0 +1,9 @@
+spriteTypes = {	
+
+	##IRELAND MOD##
+	SpriteType = { 
+		name = "GFX_focus_IRE_rights_of_women"
+		texturefile = "gfx/interface/goals/focus_IRE_rights_of_women.dds"
+	}
+
+}

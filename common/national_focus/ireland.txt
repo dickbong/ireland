@@ -1308,6 +1308,7 @@ focus_tree = {
 		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { }
 		mutually_exclusive = { focus = IRE_fix_troubles_1 }
+		mutually_exclusive = { focus = IRE_draft_constitution }
 		x = 16
 		y = 0
 		cost = 10
@@ -1455,7 +1456,11 @@ focus_tree = {
 			}
 			ENG = { has_war_with = GER }
 			GER = { has_government = fascism }
-			has_government = neutrality
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			
 			has_civil_war = no
 		}
 
@@ -1768,9 +1773,9 @@ focus_tree = {
 	
 	focus = {
 		id = IRE_draft_constitution
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		prerequisite = { }
-		mutually_exclusive = {  }
+		mutually_exclusive = { focus = IRE_give_into_demands }
 		x = 25
 		y = 0
 		cost = 10
@@ -1786,7 +1791,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = IRE_constitution
+			#news event here please
 		}
 	}
 	
@@ -1810,7 +1816,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = { remove_idea = IRE_constitution add_idea = IRE_constitution_fascism }	
 		}
 	}
 	
@@ -1834,7 +1840,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = { remove_idea = IRE_constitution add_idea = IRE_constitution_communism }	
 		}
 	}
 	
@@ -1858,14 +1864,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			if = {
+				limit = { has_government = democratic }
+				swap_ideas = { remove_idea = IRE_constitution add_idea = IRE_constitution_current_democratic }
+			}
+			if = {
+				limit = { NOT = { has_government = democratic } }
+				swap_ideas = { remove_idea = IRE_constitution add_idea = IRE_constitution_democratic }
+			}
 		}
 	}
 	
 	focus = {
 		id = IRE_executive_authority_act
 		icon = GFX_goal_tfv_sever_ties_with_uk
-		prerequisite = { focus = IRE_democratic_leaning_constitution focus = IRE_fascism_leaning_constitution focus = IRE_neutrality_leaning_constitution focus = IRE_communism_leaning_constitution }
+		prerequisite = { focus = IRE_democratic_leaning_constitution focus = IRE_fascism_leaning_constitution focus = IRE_communism_leaning_constitution }
 		mutually_exclusive = { focus = IRE_keep_monarch_powers }
 		x = 26
 		y = 2
@@ -1882,7 +1895,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = IRE_exec_authority
 		}
 	}
 	
@@ -1907,7 +1920,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = IRE_keep_monarch
 		}
 	}
 
@@ -2219,29 +2232,6 @@ focus_tree = {
 			
 		}
 	}
-	focus = {
-		id = IRE_joining_the_war
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = IRE_keeping_the_peace focus = IRE_volunteer_brigade }
-		mutually_exclusive = { focus = IRE_ni_for_allies }
-		x = 26
-		y = 7
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		available = {
-			
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			
-		}
-	}
 	
 	focus = {
 		id = IRE_the_nazi_king
@@ -2481,29 +2471,7 @@ focus_tree = {
 			
 		}
 	}
-	
-	focus = {
-		id = IRE_gaelic_league
-		icon = GFX_goal_generic_alliance
-		prerequisite = { focus = IRE_strike_for_ni }
-		x = 21
-		y = 7
-		cost = 10
 
-		available_if_capitulated = yes
-		
-		available = {
-			
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			
-		}
-	}
 	
 	focus = {
 		id = IRE_true_communism

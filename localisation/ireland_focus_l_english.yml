@@ -24,3 +24,12 @@
  IRE_ultimatum_for_northern_ireland_desc:0 "If we give an ultimatum for the ownership of Northern Ireland, we may be able to gain it."
  IRE_S_plan:0 "S Plan"
  IRE_S_plan_desc:0 "Giving Irish military intelligence to the Abwehr might be beneficial."
+ #CONSTITUTION TREE
+ IRE_draft_constitution:0 "Draft Constitution"
+ IRE_draft_constitution_desc:0 "Drafting a new constitution will lay the foundation for freedom from Britain."
+ IRE_fascism_leaning_constitution:0 "Constitutional Loopholes"
+ IRE_fascism_leaning_constitution_desc:0 "Adding in hard-to-see loop holes to allow more absolute power to the Taoiseach will be beneficial to our coming regime."
+ IRE_communism_leaning_constitution:0 "Tax Heavy Amendments"
+ IRE_communism_leaning_constitution_desc:0 "Adding in taxes to the rich will further allow an efficient future socialist state."
+ IRE_democratic_leaning_constitution:0 "Just Clauses"
+ IRE_democratic_leaning_constitution_desc:0 "If we make our constitution with many checks and balances, democracy will always prevail."

@@ -10,20 +10,56 @@
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
 		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
+		light_armor = { x = 2 y = 1 }
+		light_armor = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Cúltaca an Airm"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Cúlchiste umar"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
 	}
 }
 
 
 units = {
-	### Army High Command ###
+	### Leinster Reserve ###
 	division = {
-		name = "An Chéad Chathlán Coisithe"
+		name = "Cúlchiste Laighean"
 		location = 11293
-		division_template = "Chathlán Coisithe"		# Represents Ireland's four regional commands 
+		division_template = "Cúlchiste umar"		# Represents Ireland's four regional commands 
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.4
+
+	}
+	### Connaught Reserve ###
+	division = {
+		name = "Cúlchiste Connacht"
+		location = 3396
+		division_template = "Cúltaca an Airm"		# Represents Ireland's four regional commands 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+
+	}
+	### Munster Reserve ###
+	division = {
+		name = "Cúlchiste Munster"
+		location = 7394
+		division_template = "Cúltaca an Airm"		# Represents Ireland's four regional commands 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
 
 	}
 }
@@ -38,5 +74,14 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.75
 		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank
+			creator = "IRE"
+		}
+		requested_factories = 1
+		progress = 0
+		efficiency = 20
 	}
 }
