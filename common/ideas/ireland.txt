@@ -733,6 +733,7 @@ ideas = {
 				autonomy_gain = 0.2
 			}
 		}
+		
 		IRE_exec_auth = {
 		
 			picture = ast_abandon_the_westminster_system
@@ -753,6 +754,26 @@ ideas = {
 			}
 		}
 		
+		IRE_statute_of_westminster = {
+		
+			picture = stiff_upper_lip
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				autonomy_gain = -0.1
+			}
+		}
+		
 		IRE_keep_monarch = {
 		
 			picture = stiff_upper_lip
@@ -769,7 +790,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = -0.10
-				autonomy_gain = -0.15
+				autonomy_gain = -0.2
 			}
 		}
 		
@@ -788,11 +809,69 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_advisor_cost_factor = 0.25
+				political_advisor_cost_factor = -0.25
 				political_power_factor = 0.1
+				guarantee_cost = 1.0
 			}
 		}
+		
+		IRE_reopen_relations = {
+		
+			picture = stiff_upper_lip
 
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				IMPROVE_RELATIONS_MAINTAIN_COST_FACTOR = -0.2
+			}
+		}
+		
+		IRE_waiting_for_referendum = {
+		
+			picture = stiff_upper_lip
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				autonomy_gain = 0.4
+			}
+		}
+		
+		IRE_volunteers_focus = {
+		
+			picture = generic_infantry_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				send_volunteer_divisions_required = -1.0
+			}
+		}
+		
 	}
 
 	political_advisor = {
