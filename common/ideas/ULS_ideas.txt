@@ -20,5 +20,24 @@ ideas = {
 				unity_factor = -0.4
 			}
 		}
+		ULS_appeased_catholics = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+			
+			modifier = {
+				conscription_factor = -0.2
+				unity_factor = -0.2
+			}
+		}
 	}
 }

@@ -80,10 +80,69 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_united_ireland
-		icon = GFX_goal_generic_national_unity
+		id = ULS_catholic_appeasement
+		icon = GFX_goal_generic_improve_relations
 		relative_position_id = ULS_open_the_border
 		prerequisite = { focus = ULS_open_the_border }
+		mutually_exclusive = {
+			focus = ULS_reaffirm_partition
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+		}
+		
+	}
+	
+	focus = {
+		id = ULS_cross_border_exercises
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = ULS_open_the_border
+		prerequisite = { focus = ULS_open_the_border }
+		mutually_exclusive = {
+			focus = ULS_reaffirm_partition
+		}
+		
+		available = {
+		}
+		
+		x = -2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+		}
+		
+	}
+	
+	focus = {
+		id = ULS_power_transfer
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ULS_catholic_appeasement
+		prerequisite = { focus = ULS_catholic_appeasement }
+		mutually_exclusive = {
+			focus = ULS_declaration_of_unity
+		}
+		
+		bypass = {
+			is_subject_of = IRE
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 		
 		x = 0
 		y = 1
@@ -91,10 +150,17 @@ focus_tree = {
 		#ai_will_do = {
 		#	factor = 1
 		#}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		available = {
+			IRE = {
+				is_subject_of = ENG
+				compare_autonomy_state > autonomy_puppet
+			}
+			ULS = {
+				is_subject_of = ENG
+				compare_autonomy_state > autonomy_integrated_puppet
+			}
+		}
 
 		completion_reward = {
 			hidden_effect = {
@@ -107,6 +173,122 @@ focus_tree = {
 			IRE = { puppet = ULS }
 		}
 	}
+	
+	focus = {
+		id = ULS_declaration_of_unity
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ULS_catholic_appeasement
+		prerequisite = { focus = ULS_catholic_appeasement }
+		mutually_exclusive = {
+			focus = ULS_power_transfer
+		}
+		
+		bypass = {
+			is_subject_of = IRE
+		}
+		
+		x = -2
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_subject_of = ENG
+				}
+				every_owned_state = { add_core_of = ENG }
+			}
+		
+			hidden_effect = {
+				set_autonomy = {
+					target = ULS
+					autonomy_state = autonomy_free
+				}			
+			}
+			drop_cosmetic_tag = yes
+			IRE = { puppet = ULS }
+			
+		}
+	}
+	
+	focus = {
+		id = ULS_province_of_ulster
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_power_transfer
+		prerequisite = { focus = ULS_power_transfer focus = ULS_declaration_of_unity}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		
+		bypass = {
+			763 = { is_owned_by = ULS }
+			750 = { is_owned_by = ULS }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_state_owner = 763
+			set_state_owner = 750
+			add_autonomy_ratio = {
+				value = 0.1
+				localization = ULS_province_of_ulster
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_united_ireland
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ULS_province_of_ulster
+		prerequisite = { focus = ULS_province_of_ulster}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+				
+		available = {
+			is_subject_of = IRE
+			has_autonomy_state = autonomy_integrated_puppet
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			IRE = {
+				if = {
+					limit = { is_ai = yes }
+					
+					change_tag_from = ULS
+					annex_country = { target = ULS }
+				}
+			}
+		}
+	}
+	
+	
+	
 	
 	focus = {
 		id = ULS_reaffirm_partition
@@ -220,6 +402,11 @@ focus_tree = {
 			focus = ULS_ulster_third_way
 		}
 		
+		bypass = {
+			763 = { is_claimed_by = ULS }
+			750 = { is_claimed_by = ULS }
+		}
+		
 		x = 0
 		y = 1
 		cost = 10
@@ -248,6 +435,10 @@ focus_tree = {
 		relative_position_id = ULS_for_god_and_ulster
 		prerequisite = { focus = ULS_for_god_and_ulster }
 		mutually_exclusive = {
+		}
+		
+		bypass = {
+			NOT = { is_subject_of = ENG }
 		}
 		
 		x = 0
