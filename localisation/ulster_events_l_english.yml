@@ -1,0 +1,9 @@
+﻿l_english:
+ 
+ ## POWER TRANSFER ##
+ ulster.10.t:0 "[ULS.GetAdjective] Power Transfer"
+ ulster.10.d:0 "[ENG.GetNameDef] has agreed to transfer most of it's sovereign authority over the [ULS.GetAdjective] parliament to [IRE.GetNameDef]. [IRE.GetLeader] claims this agreement marks one of the first major steps towards reunification since the island was partitioned in 1921. [ENG.GetLeader] has played down the significance of the agreement, citing [IRE.GetNameDef]'s continued status as a [ENG.GetAdjective] subject."
+ 
+  ## REUNIFICATION ##
+ ulster.11.t:0 "Irish Reunification"
+ ulster.11.d:0 "Celebrations erupt up and down the island as the [ULS.GetAdjective] parliament passed the final vote to formally reunite with [IRE.GetNameDef]. The partition has officially been lifted, and Irish citizens look excitedly towards a united future."

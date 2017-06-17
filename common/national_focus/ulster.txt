@@ -171,6 +171,10 @@ focus_tree = {
 			}
 			drop_cosmetic_tag = yes
 			IRE = { puppet = ULS }
+			
+			hidden_effect = {
+				news_event = { id = ulster.10 }
+			}
 		}
 	}
 	
@@ -234,6 +238,11 @@ focus_tree = {
 		#	factor = 1
 		#}
 		
+		available = {
+			is_subject_of = IRE
+		}
+		
+		
 		bypass = {
 			763 = { is_owned_by = ULS }
 			750 = { is_owned_by = ULS }
@@ -276,18 +285,20 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			hidden_effect = {
+				news_event = { id = ulster.11 }
+			}
+			
 			IRE = {
 				if = {
 					limit = { is_ai = yes }
 					
 					change_tag_from = ULS
-					annex_country = { target = ULS }
+					annex_country = { target = ULS transfer_troops = yes }
 				}
 			}
 		}
 	}
-	
-	
 	
 	
 	focus = {
