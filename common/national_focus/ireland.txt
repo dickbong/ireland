@@ -1778,7 +1778,7 @@ focus_tree = {
 		mutually_exclusive = { focus = IRE_give_into_demands }
 		x = 25
 		y = 0
-		cost = 10
+		cost = 20
 
 		available_if_capitulated = yes
 		
@@ -1793,6 +1793,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = IRE_constitution
 			#news event here please
+			add_political_power = -50
 		}
 	}
 	
@@ -1897,7 +1898,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = irelandmainfocus.1 days = 1 }
-			add_ideas = IRE_exec_auth
+			swap_ideas = { remove_idea = IRE_statute_of_westminster add_idea = IRE_exec_auth }
 			ENG = { add_opinion_modifier = { target = IRE modifier = executive_authority_modifier }	}
 		}
 	}
@@ -1923,7 +1924,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = IRE_keep_monarch
+			swap_ideas = { remove_idea = IRE_statute_of_westminster add_idea = IRE_keep_monarch }
 			if = { 
 				limit = {
 					NOT = { ENG = { has_idea = george_v } }
@@ -1943,7 +1944,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRE_constituional_referendum
+		id = IRE_constitutional_referendum
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = IRE_executive_authority_act focus = IRE_keep_monarch_powers }
 		x = 25
@@ -1962,15 +1963,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = IRE_waiting_for_referendum
-			add_country_flag = IRE_constituional_referendum_flag
-			custom_effect_tooltip = IRE_constituional_referendum_tt
+			set_country_flag = IRE_constituional_referendum_flag
+			custom_effect_tooltip = IRE_constitutional_referendum_tt
 		}
 	}
 	
 	focus = {
 		id = IRE_state_of_emergency
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = IRE_constituional_referendum }
+		prerequisite = { focus = IRE_constitutional_referendum }
 		x = 24
 		y = 4
 		cost = 10
@@ -2058,7 +2059,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			ENG = { add_opinion_modifier = { target = IRE modifier = small_increase } }
 		}
 	}
 	
@@ -2081,7 +2082,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			ENG = { add_opinion_modifier = { target = IRE modifier = small_increase } }
 		}
 	}
 	
@@ -2106,7 +2107,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			send_equipment = { target = ENG type = infantry_equipment amount = 1000 }
+			ENG = { add_opinion_modifier = { target = IRE modifier = small_increase } }
 		}
 	}
 	
@@ -2129,7 +2131,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = foreign_expeditions_focus
 		}
 	}
 	
