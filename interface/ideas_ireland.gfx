@@ -12,4 +12,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ULS_orangeman_1.tga"
 	}
 	
+	spriteType = {
+		name = "GFX_idea_ULS_orangeman_2"
+		texturefile = "gfx/interface/ideas/ULS_orangeman_2.tga"
+	}
+	
 }

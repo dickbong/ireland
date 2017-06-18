@@ -68,5 +68,31 @@ ideas = {
 				factor = 0
 			}
 		}
+		
+		ULS_democratic_reformer = {
+			
+			allowed = {
+				original_tag = ULS
+			}
+			
+			picture = ULS_orangeman_2
+
+			
+			traits = { democratic_reformer }
+	
+			on_add = {
+				country_event = political.13
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
 	}
 }
