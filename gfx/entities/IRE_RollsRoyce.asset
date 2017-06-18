@@ -1,30 +1,58 @@
 entity = {
 	name = "ENG_light_armor_entity"
 	pdxmesh = "IRE_RollsRoyce_mesh"
+	
+	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
+	state = { name = "move"				animation = "move"   animation_blend_time = 0.3 }
+	state = { name = "attack"				animation = "attack"   animation_blend_time = 0.3 }
 }
 
 entity = {
 	name = "IRE_light_armor_entity"
 	pdxmesh = "IRE_RollsRoyce_mesh"
+	
+		state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
+	state = { name = "move"				animation = "move"   animation_blend_time = 0.3 }
+	state = { name = "attack"				animation = "attack"   animation_blend_time = 0.3 }
 }
 entity = {
 	name = "IRE_medium_armor_entity"
 	pdxmesh = "IRE_RollsRoyce_mesh"
+	
+	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
+	state = { name = "move"				animation = "move"   animation_blend_time = 0.3 }
+	state = { name = "attack"				animation = "attack"   animation_blend_time = 0.3 }
 }
 entity = {
 	name = "IRE_heavy_armor_entity"
 	pdxmesh = "IRE_RollsRoyce_mesh"
+	
+	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
+	state = { name = "move"				animation = "move"   animation_blend_time = 0.3 }
+	state = { name = "attack"				animation = "attack"   animation_blend_time = 0.3 }
 }
 
 entity = {
 	name = "ULS_light_armor_entity"
 	pdxmesh = "IRE_RollsRoyce_mesh"
+	
+	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
+	state = { name = "move"				animation = "move"   animation_blend_time = 0.3 }
+	state = { name = "attack"				animation = "attack"   animation_blend_time = 0.3 }
 }
 entity = {
 	name = "ULS_medium_armor_entity"
 	pdxmesh = "IRE_RollsRoyce_mesh"
+	
+	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
+	state = { name = "move"				animation = "move"   animation_blend_time = 0.3 }
+	state = { name = "attack"				animation = "attack"   animation_blend_time = 0.3 }
 }
 entity = {
 	name = "ULS_heavy_armor_entity"
 	pdxmesh = "IRE_RollsRoyce_mesh"
+	
+	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
+	state = { name = "move"				animation = "move"   animation_blend_time = 0.3 }
+	state = { name = "attack"				animation = "attack"   animation_blend_time = 0.3 }
 }
