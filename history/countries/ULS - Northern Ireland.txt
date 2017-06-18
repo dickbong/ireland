@@ -95,9 +95,9 @@ create_country_leader = { #nationalist party
 }
 
 create_country_leader = { #protestant league
-	name = "Samuel Hanna" # Or Dorothy Harnett
-	desc = "SAMUEL_HANNA_DESC"
-	picture = "gfx/leaders/USA/Portrait_USA_William_Dudley_Pelley.dds"
+	name = "Dorothy Harnett"
+	desc = "DOROTHY_HARNETT_DESC"
+	picture = "gfx/leaders/leader_unknown_female.dds"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {

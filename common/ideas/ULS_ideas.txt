@@ -40,4 +40,33 @@ ideas = {
 			}
 		}
 	}
+	
+	political_advisor = {
+		
+		ULS_rev_samuel_hanna = {
+			
+			allowed = {
+				original_tag = ULS
+			}
+			
+			picture = ULS_orangeman_1
+
+			
+			traits = { fascist_demagogue }
+	
+			on_add = {
+				country_event = political.7
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
 }

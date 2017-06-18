@@ -7,4 +7,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/IRE_rights_of_women_idea.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_idea_ULS_orangeman_1"
+		texturefile = "gfx/interface/ideas/ULS_orangeman_1.tga"
+	}
+	
 }
