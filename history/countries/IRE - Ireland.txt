@@ -9,7 +9,7 @@ set_research_slots = 3
 set_technology = {
 	tech_support = 1
 	infantry_weapons = 1
-	infantry_weapons1 = 1
+	#infantry_weapons1 = 1 #irish arms manufacturing was not very advanced
 	gwtank = 1
 }
 
@@ -29,6 +29,9 @@ if = {
 	}
 	ENG = { set_autonomy = { target = IRE autonomy_state = autonomy_dominion } }
 }
+
+ENG = { remove_from_faction = IRE } 
+
 ### national spirit
 add_ideas = {
 	IRE_enduring_republic
