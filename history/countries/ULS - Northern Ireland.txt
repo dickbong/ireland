@@ -85,8 +85,8 @@ create_country_leader = { #uup
 }
 
 create_country_leader = { #nationalist party
-	name = "Joe Devlin"
-	desc = "JOE_DEVLIN_DESC"
+	name = "Thomas Joseph Campbell"
+	desc = "THOMAS_JOSEPH_CAMPBELL_DESC"
 	picture = "gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 	expire = "1965.1.1"
 	ideology = centrism # should really be nationalist
