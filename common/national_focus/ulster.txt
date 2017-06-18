@@ -240,6 +240,18 @@ focus_tree = {
 		
 		available = {
 			is_subject_of = IRE
+			IRE = {
+				OR = {
+					AND = {
+						has_full_control_of_state = 763
+						owns_state = 763
+					}
+					AND = {
+						has_full_control_of_state = 750
+						owns_state = 750
+					}
+				}
+			}			
 		}
 		
 		
@@ -253,10 +265,26 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			set_state_owner = 763
-			set_state_owner = 750
+			if = {
+				limit = {
+					IRE = {
+						has_full_control_of_state = 763
+						owns_state = 763
+					}
+				}
+				set_state_owner = 763
+			}
+			if = {
+				limit = {
+					IRE = {
+						has_full_control_of_state = 750
+						owns_state = 750
+					}
+				}
+				set_state_owner = 750
+			}
 			add_autonomy_ratio = {
-				value = 0.1
+				value = -0.1
 				localization = ULS_province_of_ulster
 			}
 		}

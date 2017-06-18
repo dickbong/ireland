@@ -94,5 +94,31 @@ ideas = {
 				factor = 0
 			}
 		}
+		
+		ULS_republican_nationalist = {
+			
+			allowed = {
+				original_tag = ULS
+				NOT = { is_subject_of = IRE }
+			}
+			
+			picture = GFX_idea_heisenberg
+
+			
+			traits = { republican_nationalist }
+	
+			on_add = {
+				#country_event = political.13
+				#TODO republican event
+			}
+			
+			do_effect = {
+				NOT = { is_subject_of = IRE }
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
 	}
 }
