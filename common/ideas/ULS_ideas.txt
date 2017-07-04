@@ -43,13 +43,13 @@ ideas = {
 	
 	political_advisor = {
 		
-		ULS_rev_samuel_hanna = {
+		ULS_fascist_demagogue = {
 			
 			allowed = {
 				original_tag = ULS
 			}
 			
-			picture = ULS_orangeman_1
+			picture = idea_marina_lee
 
 			
 			traits = { fascist_demagogue }
@@ -95,6 +95,39 @@ ideas = {
 			}
 		}
 		
+		ULS_backroom_backstabber = {
+			
+			picture = ULS_orangeman_1
+			
+			allowed = {
+				original_tag = ULS
+			}
+			
+			traits = { backroom_backstabber }
+		}
+		
+		ULS_prince_of_terror = {
+
+			picture = idea_donitz
+			
+			allowed = {
+				original_tag = ULS
+			}
+			
+			traits = { prince_of_terror }
+		}
+		
+		ULS_captain_of_industry = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = ULS
+			}
+			
+			traits = { captain_of_industry }
+		}
+		
 		ULS_republican_nationalist = {
 			
 			allowed = {
@@ -102,7 +135,7 @@ ideas = {
 				NOT = { is_subject_of = IRE }
 			}
 			
-			picture = GFX_idea_heisenberg
+			picture = idea_heisenberg
 
 			
 			traits = { republican_nationalist }

@@ -4,14 +4,17 @@
  ULS_appeased_catholics:0 "Appeased Catholics"
  ULS_appeased_catholics_desc:0 "The Protestant ruling class remains dominant, but recent compromises have given some Catholics a new hope for a better future."
  
- ULS_rev_samuel_hanna:0 "Rev. Samuel Hanna"
- ULS_rev_samuel_hanna_desc:0 "This protestant firebrand fears that the direction of today's politics could lead to equal rights for Catholics and other undesirables, and insists that the established privileges enjoyed by protestants must be maintained at any cost." 
- 
  ULS_medium_aircraft_manufacturer:0 "Short & Harland"
  ULS_support_equipment_manufacturer:0 "James Mackie & Sons"
  ULS_industrial_concern:0 "Sirocco Works"
  
  ULS_democratic_reformer:0 "William Stewart"
+ ULS_captain_of_industry:0 "Sir Basil Brooke"
+ ULS_backroom_backstabber:0 "Sir Joseph Davison"
+ ULS_prince_of_terror:0 "Sir Charles Wickham"
+ 
+ ULS_fascist_demagogue:0 "Dorothy Harnett"
+ ULS_fascist_demagogue_desc:0 "This protestant firebrand fears that the direction of today's politics could lead to equal rights for Catholics and other undesirables, and insists that the established privileges enjoyed by protestants must be maintained at any cost." 
  
  ULS_republican_nationalist:0 "Republican Nationalist"
  republican_nationalist:0 "Republican Nationalist"
