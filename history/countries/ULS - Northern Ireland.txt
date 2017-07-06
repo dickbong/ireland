@@ -84,6 +84,10 @@ create_country_leader = { #uup
 	}
 }
 
+##remaining Democratic leaders are defined in ULS_scripted_effects.txt
+
+
+
 create_country_leader = { #nationalist party
 	name = "Thomas Joseph Campbell"
 	desc = "THOMAS_JOSEPH_CAMPBELL_DESC"
@@ -95,9 +99,9 @@ create_country_leader = { #nationalist party
 }
 
 create_country_leader = { #protestant league
-	name = "Dorothy Harnett"
-	desc = "DOROTHY_HARNETT_DESC"
-	picture = "gfx/leaders/leader_unknown_female.dds"
+	name = "Reverend Samuel Hanna"
+	desc = "SAMUEL_HANNA_DESC"
+	picture = "Portrait_Ulster_Hanna.tga"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {

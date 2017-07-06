@@ -4,6 +4,15 @@
  ulster.10.t:0 "[ULS.GetAdjective] Power Transfer"
  ulster.10.d:0 "[ENG.GetNameDef] has agreed to transfer most of it's sovereign authority over the [ULS.GetAdjective] parliament to [IRE.GetNameDef]. [IRE.GetLeader] claims this agreement marks one of the first major steps towards reunification since the island was partitioned in 1921. [ENG.GetLeader] has played down the significance of the agreement, citing [IRE.GetNameDef]'s continued status as a [ENG.GetAdjective] subject."
  
-  ## REUNIFICATION ##
+ ## REUNIFICATION ##
  ulster.11.t:0 "Irish Reunification"
  ulster.11.d:0 "Celebrations erupt up and down the island as the [ULS.GetAdjective] parliament passed the final vote to formally reunite with [IRE.GetNameDef]. The partition has officially been lifted, and Irish citizens look excitedly towards a united future."
+ 
+ ## JAMES CRAIG DEAD ##
+ ulster.20.t:0 "James Craig Dead!"
+ ulster.20.d:0 "The prime minister was found dead his home at Glencraig, County Down.\n\nWho amongst the Executive Committee will succeed the very father of [ULS.GetAdjective] politics?"
+ ulster.20.a:0 "Minister of Finance, John M. Andrews"
+ ulster.20.b:0 "Minister of Agriculture, Sir Basil Brooke"
+ 
+ ulster.21.t:0 "[ULS.GetAdjective] Prime Minister Dies!"
+ ulster.21.d:0 "James Craig has died peacefully at his home at Glencraig, County Down.\n\nA loyal Orangeman, he led the Parliament of [ULS.GetNameDef] from its creation in 1921. He has been succeeded by [ULS.GetLeader], at least until the next election."
