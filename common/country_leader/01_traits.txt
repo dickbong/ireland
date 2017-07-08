@@ -11,4 +11,15 @@ leader_traits = {
 			factor = 0
 		}
 	}
+	
+	floundering_economist = {
+		random = no
+		political_power_factor = -0.1
+		unity_factor = -0.1
+		production_speed_buildings_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

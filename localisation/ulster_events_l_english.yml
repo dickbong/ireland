@@ -10,9 +10,19 @@
  
  ## JAMES CRAIG DEAD ##
  ulster.20.t:0 "James Craig Dead!"
- ulster.20.d:0 "The prime minister was found dead his home at Glencraig, County Down.\n\nWho amongst the Executive Committee will succeed the very father of [ULS.GetAdjective] politics?"
- ulster.20.a:0 "Minister of Finance, John M. Andrews"
+ ulster.20.d:0 "The prime minister was found dead his home at Glencraig, County Down.\n\nWe must hastily find a successor to the very father of [Root.GetAdjective] politics!"
+ ulster.20.a:0 "The Minister of Finance will do."
  ulster.20.b:0 "Minister of Agriculture, Sir Basil Brooke"
  
- ulster.21.t:0 "[ULS.GetAdjective] Prime Minister Dies!"
- ulster.21.d:0 "James Craig has died peacefully at his home at Glencraig, County Down.\n\nA loyal Orangeman, he led the Parliament of [ULS.GetNameDef] from its creation in 1921. He has been succeeded by [ULS.GetLeader], at least until the next election."
+ ulster.21.t:0 "[From.GetAdjective] Prime Minister Dies!"
+ ulster.21.d:0 "James Craig, Viscount Craigavon, collapsed at his home in County Down and died soon afterwards.\n\nCraig led the Parliament of [From.GetNameDef] from its creation in 1921. A bluff and strong-minded imperialist, he was known as the “strong man of Ulster”.\n\nHe has been succeeded by [From.GetLeader], at least until the next election."
+ 
+ ## JOHN M. ANDREWS CRISIS 
+ ulster.23.t:0 "[Root.GetLeader] Under Pressure"
+ ulster.23.d:0 "Pressure is mounting for [Root.GetLeader] to step down as the Prime Minister of [Root.GetNameDef]. Many [Root.GetRulingParty] backbenchers are concerned that his policies have led to [Root.GetRulingParty] falling behind on the world stage."
+ ulster.23.a:0 "It is safer to maintain status quo."
+ ulster.23.b:0 "We should find a replacement to diffuse the crisis!"
+ 
+ #Andrews leaves, Brooke takes charge
+  ulster.25.t:0 "[From.GetAdjective] Prime Minister Resigns!"
+ ulster.25.d:0 "John M. Andrews has announced his resignation from the premiership of [From.GetNameDef], in the face of backbench dissent within the [From.GetRulingParty]. Cabinet member [From.GetLeader] has agreed to take his place as the new prime minister."

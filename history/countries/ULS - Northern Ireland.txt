@@ -4,6 +4,8 @@ capital = 119
 
 oob = "ULS_1936"
 
+set_national_unity = 0.9
+
 set_research_slots = 2
 
 set_technology = {
@@ -31,6 +33,7 @@ add_opinion_modifier = { target = IRE modifier = hostile_status }
 ### national spirit
 add_ideas = {
 	ULS_religious_sectarianism
+	ULS_old_guard
 	disarmed_nation
 }
 ###ministers
@@ -74,13 +77,14 @@ set_politics = {
 ## DEMOCRATIC LEADERS ##
 
 create_country_leader = { #uup
+	id = 99941
 	name = "James Craig"
 	desc = "POLITICS_JAMES_CRAIG_DESC"
 	picture = "Portrait_Ulster_Craig.tga"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
-		#
+		staunch_constitutionalist
 	}
 }
 

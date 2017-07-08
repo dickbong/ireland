@@ -1,6 +1,7 @@
 #ULS_elect_craig_effect = yes
 ULS_elect_craig_effect = {
 	create_country_leader = { #uup
+		id = 99941
 		name = "James Craig"
 		desc = "POLITICS_JAMES_CRAIG_DESC"
 		picture = "Portrait_Ulster_Craig.tga"
@@ -15,12 +16,14 @@ ULS_elect_craig_effect = {
 #ULS_elect_andrews_effect = yes
 ULS_elect_andrews_effect = {
 	create_country_leader = {
+		id = 99942
 		name = "John M. Andrews"
 		desc = "POLITICS_JOHN_ANDREWS_DESC"
 		picture = "Portrait_Ulster_Andrews.tga"
 		expire = "1965.1.1"
 		ideology = conservatism
 		traits = {
+			floundering_economist
 		}
 	}
 		
@@ -30,6 +33,7 @@ ULS_elect_andrews_effect = {
 #ULS_elect_brooke_effect = yes
 ULS_elect_brooke_effect = {
 	create_country_leader = { #uup
+		id = 99943
 		name = "Sir Basil Brooke"
 		desc = "POLITICS_BASIL_BROOKE_DESC"
 		picture = "Portrait_Ulster_Brooke.tga"
