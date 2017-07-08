@@ -17,4 +17,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ULS_orangeman_2.tga"
 	}
 	
+	
+	spriteType = {
+		name = "GFX_idea_ULS_medium_aircraft_manufacturer"
+		texturefile = "gfx/interface/ideas/ULS_medium_aircraft_manufacturer.tga"
+	}
+		spriteType = {
+		name = "GFX_idea_ULS_industrial_concern"
+		texturefile = "gfx/interface/ideas/ULS_industrial_concern.tga"
+	}
+		spriteType = {
+		name = "GFX_idea_ULS_support_equipment_manufacturer"
+		texturefile = "gfx/interface/ideas/ULS_support_equipment_manufacturer.tga"
+	}
 }

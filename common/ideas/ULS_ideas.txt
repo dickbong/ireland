@@ -39,6 +39,28 @@ ideas = {
 				unity_factor = -0.2
 			}
 		}
+		
+		ULS_old_guard = {
+			
+			allowed = {
+				original_tag = ULS
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_power_cost = 0.5
+			}
+		}
+		
+		
 	}
 	
 	political_advisor = {
@@ -49,7 +71,7 @@ ideas = {
 				original_tag = ULS
 			}
 			
-			picture = idea_marina_lee
+			picture = marina_lee
 
 			
 			traits = { fascist_demagogue }
@@ -108,7 +130,7 @@ ideas = {
 		
 		ULS_prince_of_terror = {
 
-			picture = idea_donitz
+			picture = donitz
 			
 			allowed = {
 				original_tag = ULS
@@ -135,7 +157,7 @@ ideas = {
 				NOT = { is_subject_of = IRE }
 			}
 			
-			picture = idea_heisenberg
+			picture = heisenberg
 
 			
 			traits = { republican_nationalist }
