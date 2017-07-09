@@ -250,6 +250,10 @@ focus_tree = {
 						has_full_control_of_state = 750
 						owns_state = 750
 					}
+					AND = {
+						has_full_control_of_state = 758
+						owns_state = 758
+					}
 				}
 			}			
 		}
@@ -258,6 +262,7 @@ focus_tree = {
 		bypass = {
 			763 = { is_owned_by = ULS }
 			750 = { is_owned_by = ULS }
+			758 = { is_owned_by = ULS }
 		}
 
 		cancel_if_invalid = yes
@@ -282,6 +287,15 @@ focus_tree = {
 					}
 				}
 				set_state_owner = 750
+			}
+			if = {
+				limit = {
+					IRE = {
+						has_full_control_of_state = 758
+						owns_state = 758
+					}
+				}
+				set_state_owner = 758
 			}
 			add_autonomy_ratio = {
 				value = -0.1
@@ -444,6 +458,7 @@ focus_tree = {
 		bypass = {
 			763 = { is_claimed_by = ULS }
 			750 = { is_claimed_by = ULS }
+			758 = { is_claimed_by = ULS }
 		}
 		
 		x = 0
@@ -461,6 +476,7 @@ focus_tree = {
 		completion_reward = {
 			763 = { add_claim_by = ULS }
 			750 = { add_claim_by = ULS }
+			758 = { add_claim_by = ULS }
 			add_autonomy_ratio = {
 					value = 0.1
 					localization = ULS_for_god_and_ulster
