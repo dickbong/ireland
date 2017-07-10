@@ -24,7 +24,7 @@ units = {
 units = {
 	division = {
 		name = "Ulster Special Constabulary"
-		location = 3379
+		location = 276
 		division_template = "Royal Ulster Constabulary"
 		force_equipment_variants = { infantry_equipment_0 = { creator = "ENG" } }
 	}

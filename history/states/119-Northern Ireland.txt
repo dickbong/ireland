@@ -16,16 +16,22 @@ state={
 			dockyard = 2
 			3379 = {
 				naval_base = 4
+
 			}
+
 		}
-		add_core_of = IRE
 		add_core_of = ULS
+		#add_core_of = IRE #protestant belfast would resent catholic dublin rule, so core is removed for gameplay reasons
+		add_claim_by = IRE
+
 	}
 
 	provinces={
-		276 385 3217 3242 3329 3379 11257 
+		3217 3329 3379 
 	}
-	manpower=1198537
-	buildings_max_level_factor=1
-	state_category="city"
+	#manpower=1198537
+	#60% of original
+	manpower=719122
+	buildings_max_level_factor=1.000
+	state_category=city
 }

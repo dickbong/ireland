@@ -1,0 +1,32 @@
+state={
+	id=764
+	name="STATE_764"
+	
+	
+	
+	history={
+		owner = ULS
+		
+		victory_points = {
+			276 1 
+		}
+		
+		
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		
+		add_core_of = IRE
+		#add_core_of = ULS #removed to simulate catholic majority
+	}
+	
+	provinces={
+		276 385 3242 11257 
+	}
+	
+	
+	manpower=479415
+	state_category=town
+	buildings_max_level_factor=1.000
+}

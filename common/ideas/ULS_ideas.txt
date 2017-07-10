@@ -16,7 +16,7 @@ ideas = {
 			picture = FRA_matignon_agreements
 			
 			modifier = {
-				conscription_factor = -0.4
+				#conscription_factor = -0.4 #no longer needed as the Colony State of Ulster East does this
 				unity_factor = -0.4
 			}
 		}
@@ -35,7 +35,7 @@ ideas = {
 			picture = FRA_matignon_agreements
 			
 			modifier = {
-				conscription_factor = -0.2
+				#conscription_factor = -0.2
 				unity_factor = -0.2
 			}
 		}
