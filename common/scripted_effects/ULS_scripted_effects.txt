@@ -43,3 +43,13 @@ ULS_elect_brooke_effect = {
 		}
 	}
 }
+
+#ULS_to_derry_effect = yes
+ULS_to_derry_effect = {
+	set_province_name = { id = 276 name = "Derry" }
+}
+
+#ULS_to_londonderry_effect = yes
+ULS_to_londonderry_effect = {
+	set_province_name = { id = 276 name = "Londonderry" }
+}

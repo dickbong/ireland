@@ -63,5 +63,50 @@ on_actions = {
 				set_cosmetic_tag = IRE_uk
 			}
 		}
-	}	
+	}
+	
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		#Derry to Londonderry
+		effect = {
+			if = {
+				limit = { 
+					FROM.FROM = { state = 764 }
+					ROOT = {
+						OR = {
+							original_tag = ENG
+							AND = {
+								original_tag = ULS
+								AND = {
+									NOT = { is_subject_of = IRE }
+									NOT = { has_government = neutrality }
+								}
+							}
+						}
+					}
+				}
+				ULS_to_londonderry_effect = yes
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { state = 764 }
+					ROOT = {
+						OR = {
+							original_tag = IRE
+							AND = {
+								original_tag = ULS
+								OR = {
+									is_subject_of = IRE
+									has_government = neutrality
+								}
+							}
+						}
+					}
+				}
+				ULS_to_derry_effect = yes
+			}
+		}
+	}
 }
