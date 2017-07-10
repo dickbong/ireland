@@ -8,14 +8,19 @@
  ulster.11.t:0 "Irish Reunification"
  ulster.11.d:0 "Celebrations erupt up and down the island as the [ULS.GetAdjective] parliament passed the final vote to formally reunite with [IRE.GetNameDef]. The partition has officially been lifted, and Irish citizens look excitedly towards a united future."
  
+ ## JAMES CRAIG DYING RUMOURS ##
+ ulster.19.t:0 "Rumours of the Prime Minister's health!"
+ ulster.19.d:0 "[Root.GetLeader]'s health has been called into question as he approaches his second decade as Prime Minister of [Root.GetNameDef].\n\nSir Wilfred Spender has confided to journalists that Craig has become a leader whom "true friends would advise to retire" for he is "too unwell to carry on". Furthermore, he accused the prime minister of being incapable of doing more than one hour's constructive work in a day.\n\nLady Londonderry, an influential society hostess, was more forthright; she has described Craig as "ga-ga".\n\nThe prime minister made an effort to address the Stormont Parliament where he personally rubbished the claims, before quickly retiring to his house in Craigavon. It appears he intends to continue without resignation."
+ ulster.19.a:0 "Is he fit to lead?"
+ 
  ## JAMES CRAIG DEAD ##
  ulster.20.t:0 "James Craig Dead!"
- ulster.20.d:0 "The prime minister was found dead his home at Glencraig, County Down.\n\nWe must hastily find a successor to the very father of [Root.GetAdjective] politics!"
+ ulster.20.d:0 "The prime minister has been found dead his home at Glencraig, County Down.\n\nHe was found by his wife shortly after settling down to listen to the radio, a pipe still smoking in his mouth.\n\nWe must hastily find a successor to the very father of [Root.GetAdjective] politics!"
  ulster.20.a:0 "The Minister of Finance will do."
  ulster.20.b:0 "Minister of Agriculture, Sir Basil Brooke"
  
  ulster.21.t:0 "[From.GetAdjective] Prime Minister Dies!"
- ulster.21.d:0 "James Craig, Viscount Craigavon, collapsed at his home in County Down and died soon afterwards.\n\nCraig led the Parliament of [From.GetNameDef] from its creation in 1921. A bluff and strong-minded imperialist, he was known as the “strong man of Ulster”.\n\nHe has been succeeded by [From.GetLeader], at least until the next election."
+ ulster.21.d:0 "James Craig, Viscount Craigavon, has died in his home.\n\nCraig led the Parliament of [From.GetNameDef] from its creation in 1921. A bluff and strong-minded imperialist, he was known as the “strong man of Ulster”.\n\nHe has been succeeded by [From.GetLeader], at least until the next election."
  
  ## JOHN M. ANDREWS CRISIS 
  ulster.23.t:0 "[Root.GetLeader] Under Pressure"
